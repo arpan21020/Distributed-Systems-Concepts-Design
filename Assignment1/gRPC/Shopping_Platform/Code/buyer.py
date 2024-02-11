@@ -16,6 +16,7 @@ class NotificationServicer(shopping_pb2_grpc.NotificationServicer):
             result=shopping_pb2.NotifyClientResponse.SUCCESS
         )
 
+
 def search_item(stub, item_name, category):
     request = shopping_pb2.SearchRequest(name=item_name, category=category)
     response = stub.SearchItem(request)
@@ -61,7 +62,8 @@ def rate_item(stub, item_id, buyer_address, rating):
     else:
         print("FAIL")
 
-def main():
+
+def main(ip, port, server_ip):
     logging.basicConfig()
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     shopping_pb2_grpc.add_NotificationServicer_to_server(NotificationServicer(), server)
@@ -69,7 +71,7 @@ def main():
     server.start()
     print("Buyer notification Server started")
     buyer_address = f"{ip}:{port}"
-    with grpc.insecure_channel(f"{ip}:{port}") as market_channel:
+    with grpc.insecure_channel(server_ip + ":50052") as market_channel:
         market_stub = shopping_pb2_grpc.MarketStub(market_channel)
         unique_id = str(uuid.uuid1())
         # menu driven
@@ -108,6 +110,6 @@ def main():
 
 
 if __name__ == "__main__":
-    ip=sys.argv[1]
-    port=sys.argv[2]
-    main(ip,port)
+    ip = sys.argv[1]
+    port = sys.argv[2]
+    main(ip, port, sys.argv[3])
