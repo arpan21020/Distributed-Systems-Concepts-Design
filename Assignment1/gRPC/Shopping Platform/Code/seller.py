@@ -1,29 +1,11 @@
 import grpc
 from concurrent import futures
-import time
 import uuid
 import logging
 
 reg = False
-# from shopping_pb2 import (
-#     RegisterSellerRequest,
-#     SellItemRequest,
-#     UpdateItemRequest,
-#     DeleteItemRequest,
-#     DisplaySellerItemsRequest,
-#     NotifyClientRequest,
-#     NotifyClientResponse,
-# )
 import shopping_pb2
 import shopping_pb2_grpc
-
-# from shopping_pb2_grpc import (
-#     MarketStub,
-#     NotifyClientStub,
-#     NotifyClientServicer,
-#     add_NotifyClientServicer_to_server,
-# )
-
 
 class NotificationServicer(shopping_pb2_grpc.NotificationServicer):
     def NotifyClient(self, request, context):
@@ -122,17 +104,6 @@ def display_seller_items(stub, seller_address, seller_uuid):
             f"Quantity Remaining: {item.quantity}\nRating: {item.rating} "
         )
 
-
-# def notify_client(stub, message):
-#     request = NotifyClientRequest(message=message)
-#     response = stub.NotifyClient(request)
-#     print("Seller prints:")
-#     if response.result == response.SUCCESS:
-#         print("SUCCESS")
-#     else:
-#         print("FAIL")
-
-
 def main():
     logging.basicConfig()
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
@@ -143,21 +114,7 @@ def main():
     seller_address = "localhost:50050"
 
     with grpc.insecure_channel("localhost:50052") as market_channel:
-        # Replace with actual Market address
-        # notify_channel = grpc.insecure_channel(
-        #     "localhost:50052"
-        # )  # Replace with actual Notification address
-
         market_stub = shopping_pb2_grpc.MarketStub(market_channel)
-        # notify_stub = NotifyClientStub(notify_channel)
-
-        # # Create a gRPC server for NotifyClient service
-        # notify_server = grpc.server(futures.ThreadPoolExecutor(max_workers=1))
-        # add_NotifyClientServicer_to_server(NotifyClientServicerImpl(), notify_server)
-        # notify_server.add_insecure_port(seller_address)
-        # notify_server.start()
-
-        # Example usage of functionalities
         unique_id = str(uuid.uuid1())
         register_seller(
             market_stub,
@@ -217,50 +174,7 @@ def main():
                     )
                 else:
                     break
-
-        # sell_item(
-        #     market_stub,
-        #     product_name="Laptop",
-        #     category="ELECTRONICS",
-        #     quantity=10,
-        #     description="Powerful laptop",
-        #     seller_address=seller_address,
-        #     price_per_unit=1200.0,
-        #     seller_uuid="987a515c-a6e5-11ed-906b-76aef1e817c5",
-        # )
-        # update_item(
-        #     market_stub,
-        #     item_id=1,
-        #     new_price=1300.0,
-        #     new_quantity=8,
-        #     seller_address=seller_address,
-        #     seller_uuid="987a515c-a6e5-11ed-906b-76aef1e817c5",
-        # )
-        # delete_item(
-        #     market_stub,
-        #     item_id=1,
-        #     seller_address=seller_address,
-        #     seller_uuid="987a515c-a6e5-11ed-906b-76aef1e817c5",
-        # )
-        # display_seller_items(
-        #     market_stub,
-        #     seller_address=seller_address,
-        #     seller_uuid="987a515c-a6e5-11ed-906b-76aef1e817c5",
-        # )
-        # notify_client(
-        #     notify_stub,
-        #     "The Following Item has been updated:\nItem ID: 1, Price: $1300, "
-        #     "Name: Laptop, Category: Electronics,\nDescription: Powerful laptop.\n"
-        #     "Quantity Remaining: 8\nRating: N/A | Seller: 192.13.188.178:50051",
-        # )
     server.wait_for_termination()
-    # Keep the server running
-    # try:
-    #     while True:
-    #         time.sleep(86400)  # 1 day in seconds
-    # except KeyboardInterrupt:
-    #     notify_server.stop(0)
-
 
 if __name__ == "__main__":
     main()

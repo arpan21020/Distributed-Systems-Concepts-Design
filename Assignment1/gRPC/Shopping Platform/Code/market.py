@@ -1,11 +1,8 @@
 import grpc
 from concurrent import futures
-import time
-import uuid
 import shopping_pb2
 import shopping_pb2_grpc
 import logging
-
 
 class MarketServicer(shopping_pb2_grpc.MarketServicer):
     def __init__(self):
@@ -31,7 +28,6 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
             )
 
     def SellItem(self, request, context):
-        # Implement logic to sell an item and generate a unique item ID
         item_id = len(self.items) + 1
         item = {
             "id": item_id,
@@ -46,13 +42,11 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
         }
         self.items[item_id] = item
         print(f"Market prints: Sell Item request from {request.seller_address}")
-        print(self.items)
         return shopping_pb2.SellItemResponse(
             result=shopping_pb2.SellItemResponse.Result.SUCCESS, item_id=item_id
         )
 
     def UpdateItem(self, request, context):
-        # Implement logic to update an item and notify wishlisted buyers
         item_id = request.id
         new_price = request.price
         new_quantity = request.quantity
@@ -74,8 +68,6 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
             f"Market prints: Update Item {item_id} request from {request.seller_address} uuid = {request.uuid}"
         )
 
-        # Notify wishlisted buyers
-        # self.notify_wishlist(item)
         for buyer_address, buyer_info in self.buyers.items():
             wishlist = buyer_info["wishlist"]
             if item["id"] in wishlist:
@@ -137,7 +129,6 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
         seller_items = [
             item for item in self.items.values() if item["seller_uuid"] == seller_uuid
         ]
-        print(seller_items)
         for i in seller_items:
             caty = i["category"]
             if caty == 0:
@@ -251,7 +242,6 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
             return shopping_pb2.SearchResponse(items=lst)
 
     def BuyItem(self, request, context):
-        # Implement logic to buy an item, update quantity, and notify seller
         item_id = request.id
         quantity = request.quantity
         buyer_address = request.buyer_address
@@ -289,10 +279,6 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
             )
             if response.result == response.SUCCESS:
                 print("SUCCESS")
-        # # Notify the seller about the purchase
-        # seller_address = item["seller_address"]
-        # self.notify_seller(item, seller_address)
-
         return shopping_pb2.BuyItemResponse(result=shopping_pb2.BuyItemResponse.SUCCESS)
 
     def AddToWishList(self, request, context):
@@ -335,30 +321,6 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
         )
         return shopping_pb2.RateResponse(result=shopping_pb2.RateResponse.SUCCESS)
 
-    # def NotifyClient(self, request, context):
-    #     print("Market ↦ Buyer/Seller prints:")
-    #     print("#######\n")
-    #     print(request.message)
-    #     print("\n#######")
-    #     return RegisterSellerResponse(result=RegisterSellerResponse.SUCCESS)
-
-    # def notify_seller(self, item, seller_address):
-    #     notify_stub.NotifyClient(
-    #         NotifyClientRequest(
-    #             message=f"The Following Item has been updated:\n{self.format_item_details(item)}"
-    #         )
-    #     )
-
-    # @staticmethod
-    # def format_item_details(item):
-    #     return (
-    #         f"Item ID: {item['id']}, Price: ${item['price_per_unit']}, Name: {item['name']}, "
-    #         f"Category: {item['category']}\nDescription: {item['description']}\n"
-    #         f"Quantity Remaining: {item['quantity']}\nRating: {item['rating']} / 5 "
-    #         f"| Seller: {item['seller_address']}"
-    #     )
-
-
 def main():
     logging.basicConfig()
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
@@ -366,25 +328,6 @@ def main():
     server.add_insecure_port("[::]:50052")
     server.start()
     server.wait_for_termination()
-
-    # notify_channel = grpc.insecure_channel(
-    #     "localhost:50052"
-    # )  # Replace with actual Notification address
-    # global notify_stub
-    # notify_stub = NotifyClientStub(notify_channel)
-
-    # # Create a gRPC server for NotifyClient service
-    # notify_server = grpc.server(futures.ThreadPoolExecutor(max_workers=1))
-    # add_MarketServicer_to_server(MarketServicerImpl(), notify_server)
-    # notify_server.add_insecure_port("[::]:50050")
-    # notify_server.start()
-
-    # try:
-    #     while True:
-    #         time.sleep(86400)  # 1 day in seconds
-    # except KeyboardInterrupt:
-    #     server.stop(0)
-
 
 if __name__ == "__main__":
     main()
