@@ -1,0 +1,169 @@
+syntax = "proto3";
+
+package shopping;
+
+service Market {
+    rpc RegisterSeller(SellerInfo) returns (RegisterSellerResponse);
+    rpc SellItem(Item) returns (SellItemResponse);
+    rpc UpdateItem(ItemUpdate) returns (UpdateItemResponse);
+    rpc DeleteItem(ItemId) returns (DeleteItemResponse);
+    rpc DisplaySellerItems(SellerInfo) returns (DisplaySellerItemsResponse);
+    rpc SearchItem(SearchRequest) returns (SearchResponse);
+    rpc BuyItem(BuyRequest) returns (BuyItemResponse);
+    rpc AddToWishList(WishListRequest) returns (AddToWishListResponse);
+    rpc RateItem(RateRequest) returns (RateResponse);
+}
+
+service Notification {
+    rpc NotifyClient(Notification_mssg) returns (NotifyClientResponse);
+}
+
+message SellerInfo {
+    string address = 1;
+    string uuid = 2;
+}
+
+message Item {
+    string name = 1;
+    enum category {
+        ELECTRONICS = 0;
+        FASHION = 1;
+        OTHERS = 2;
+    }
+    category cat = 2;
+    int32 quantity = 3;
+    string description = 4;
+    string seller_address = 5;
+    double price = 6;
+    string uuid = 7;
+}
+
+message ItemUpdate {
+    int32 id = 1;
+    string seller_address = 2;
+    double price = 3;
+    int32 quantity = 4;
+    string uuid = 5;
+}
+
+message ItemId {
+    int32 id = 1;
+    string seller_address = 2;
+    string uuid = 3;
+}
+
+message DisplaySellerItemsResponse {
+    repeated DisplayItem items = 2;
+}
+
+message DisplayItem {
+    int32 id = 1;
+    double price = 2;
+    string name = 3;
+    string category = 4;
+    string description = 5;
+    int32 quantity = 6;
+    double rating = 7;
+}
+
+message  SearchRequest {
+    string name = 1;
+    int32 category = 2;
+}
+
+message SearchResponse {
+    repeated DisplayItem items = 1;
+}
+
+message BuyRequest {
+    int32 id = 1;
+    int32 quantity = 2;
+    string buyer_address = 3;
+}
+
+message BuyItemResponse {
+    enum Result {
+        SUCCESS = 0;
+        FAIL = 1;
+    }
+
+    Result result = 1;
+}
+
+message AddToWishListResponse {
+    enum Result {
+        SUCCESS = 0;
+        FAIL = 1;
+    }
+
+    Result result = 1;
+}
+
+message WishListRequest {
+    int32 id = 1;
+    string buyer_address = 2;
+}
+
+message RateRequest {
+    int32 id = 1;
+    string buyer_address = 2;
+    int32 rating = 3;
+}
+
+message RateResponse {
+    enum Result {
+        SUCCESS = 0;
+        FAIL = 1;
+    }
+
+    Result result = 1;
+}
+
+message RegisterSellerResponse {
+    enum Result {
+        SUCCESS = 0;
+        FAIL = 1;
+    }
+
+    Result result = 1;
+}
+
+message SellItemResponse {
+    enum Result {
+        SUCCESS = 0;
+        FAIL = 1;
+    }
+
+    Result result = 1;
+    int32 item_id = 2;
+}
+
+message UpdateItemResponse {
+    enum Result {
+        SUCCESS = 0;
+        FAIL = 1;
+    }
+
+    Result result = 1;
+}
+
+message DeleteItemResponse {
+    enum Result {
+        SUCCESS = 0;
+        FAIL = 1;
+    }
+
+    Result result = 1;
+}
+
+message NotifyClientResponse {
+  enum Result {
+    SUCCESS = 0;
+    FAIL = 1;
+  }
+  Result result = 1;
+}
+
+message Notification_mssg {
+  string message = 1;
+}
