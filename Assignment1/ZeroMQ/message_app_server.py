@@ -22,6 +22,8 @@
             IP-Address:
             Port:  
         }
+        Group prints: JOIN REQUEST FROM 987a515c-a6e5-11ed-906b-76aef1e817c5 [UUID OF USER]
+        
         -Request list of group server
         message_server prints: GROUP LIST REQUEST FROM LOCALHOST:2000 [or UUID]
         Message Server returns group_list
@@ -43,13 +45,15 @@ class Message_Server:
         print("Socket is listenting on port 5555.......")
         
     def register_group(self,details):
+        if(details in self.group_list):
+            return False
         self.save_messages(details)
         print(f"JOIN REQUEST FROM {details['UUID']} {details['IP-Address']}:{details['Port']}")
-        return 
+        return True 
         
     def fetch_group_list(self,details):
         self.load_messages()
-        print(f"GROUP LIST REQUEST FROM {details['UUID']} {details['IP-Address']}:{details['Port']}")
+        print(f"GROUP LIST REQUEST FROM {details['IP-Address']}:{details['UUID']}")
         return self.group_list
     
     def save_messages(self,messages):
@@ -67,14 +71,15 @@ if __name__ == "__main__":
         message = message_server.socket.recv_json()
         
         if(message["type"]=="join"):
-           message_server.register_group(message)
+           ret=message_server.register_group(message)
+           if(ret==False):
+               message_server.socket.send_json({"status":"FAILURE"})
            message_server.socket.send_json({"status":"SUCCESS"})
            
         elif(message["type"]=="get_group_list"):
             message_server.fetch_group_list(message)
-            message.server.socket.send_json({"status":"SUCCESS","grouplist":message_server.group_list})
+            message_server.socket.send_json({"status":"SUCCESS","grouplist":message_server.group_list})
         else:
             message_server.socket.send_json({"status":"INVALID REQUEST"})
         
             
-       
