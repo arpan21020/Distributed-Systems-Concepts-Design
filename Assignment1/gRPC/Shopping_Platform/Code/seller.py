@@ -2,6 +2,8 @@ import grpc
 from concurrent import futures
 import uuid
 import logging
+import sys
+
 
 reg = False
 import shopping_pb2
@@ -104,16 +106,16 @@ def display_seller_items(stub, seller_address, seller_uuid):
             f"Quantity Remaining: {item.quantity}\nRating: {item.rating} "
         )
 
-def main():
+def main(ip,port,server_ip ):
     logging.basicConfig()
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     shopping_pb2_grpc.add_NotificationServicer_to_server(NotificationServicer(), server)
-    server.add_insecure_port("[::]:50050")
+    server.add_insecure_port("[::]:"+port)
     server.start()
     print("Seller notification Server started")
-    seller_address = "localhost:50050"
+    seller_address = ip + ":" + port
 
-    with grpc.insecure_channel("localhost:50052") as market_channel:
+    with grpc.insecure_channel(server_ip+":50052") as market_channel:
         market_stub = shopping_pb2_grpc.MarketStub(market_channel)
         unique_id = str(uuid.uuid1())
         register_seller(
@@ -177,4 +179,7 @@ def main():
     server.wait_for_termination()
 
 if __name__ == "__main__":
-    main()
+    ip = sys.argv[1]
+    port = sys.argv[2]
+    main(ip, port, sys.argv[3])
+
