@@ -45,11 +45,6 @@ import time
 import uuid
 import datetime
 from random import randint, random
-
-def tprint(msg):
-    """like print, but won't get newlines confused with multiple threads"""
-    sys.stdout.write(msg + '\n')
-    sys.stdout.flush()
   
   
 class ServerTask(threading.Thread):
@@ -57,7 +52,7 @@ class ServerTask(threading.Thread):
     def __init__(self,port,ip,max_users):
         self.port=port
         self.ip=ip
-        self.max_users=max_users
+        self.max_users=1
         threading.Thread.__init__ (self)
         
 
@@ -89,12 +84,9 @@ class ServerWorker(threading.Thread):
 
     def join_request(self,requested):
         self.user_list[requested['UUID']]={"IP-Address":requested['IP-Address']}
-        print(self.user_list)
         print(f"JOIN REQUEST FROM {requested['IP-Address']}:{requested['UUID']} ")
         return
-    def leave_request(self,requested):
-        print(self.user_list)
-        
+    def leave_request(self,requested):        
         self.user_list.pop(requested['UUID'])
         print(f"LEAVE REQUEST FROM {requested['IP-Address']}:{requested['UUID']}")
         return
@@ -131,16 +123,15 @@ class ServerWorker(threading.Thread):
     def run(self):
         worker = self.context.socket(zmq.DEALER)
         worker.connect('inproc://backend')
-        # tprint('Worker started')
         while True:
-            print("userlist:",self.user_list)
+            # print("userlist:",self.user_list)
             ident, msg = worker.recv_multipart()
             request_dict=msg.decode('utf-8').split(',')
             requested={}
             for i in request_dict:
                 key,value=i.split(';')
                 requested[key]=value
-            print(requested)
+            # print(requested)
             if(requested['type']=="join"):
                 self.join_request(requested)
                 worker.send_multipart([ident,b"SUCCESS"])
@@ -160,7 +151,7 @@ class ServerWorker(threading.Thread):
                 if('timestamp' in requested.keys()):
                     msgs=self.get_messages(requested['UUID'], requested['timestamp'])
                 else:
-                    msgs=self.get_messages(requested)
+                    msgs=self.get_messages(requested['UUID'])
                 if(msgs==None):
                     worker.send_multipart([ident,b"FAILURE"])
                 else:
@@ -169,7 +160,6 @@ class ServerWorker(threading.Thread):
                 print(f"Invalid Request from {msg}")
             # if len(msg)>0 and msg[0]=='exit':
             #     break
-            # tprint('Worker received %s from %s' % (msg, ident))
             replies = randint(0,4)
             for i in range(replies):
                 pass

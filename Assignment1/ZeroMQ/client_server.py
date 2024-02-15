@@ -32,17 +32,15 @@
         UUID:
         Timestamp:  argument as a string in the format "YYYY-MM-DDTHH:MM:SS"
     }
+    Print : |Time stamp     |   Message |  
 
 '''
 import zmq
 import sys
 import threading
 import uuid
+import json
 
-def tprint(msg):
-    """like print, but won't get newlines confused with multiple threads"""
-    sys.stdout.write(msg + '\n')
-    sys.stdout.flush()
 
 class ClientTask(threading.Thread):
     """ClientTask"""
@@ -111,7 +109,6 @@ class ClientTask(threading.Thread):
             else:
                 print("JOIN STATUS : FAILURE")
                 
-            # tprint(f'Client {identity} received: {msg.decode()}')
         socket.close()
         context.term()
         
@@ -128,7 +125,7 @@ class ClientTask(threading.Thread):
         # print(f'Client {self.ip} started on port {gs_port}')
         poll = zmq.Poller()
         poll.register(socket, zmq.POLLIN)
-        socket.send_string(f"type;store_message,UUID;{self.uuid},IP-Address;{self.ip}")
+        socket.send_string(f"type;leave,UUID;{self.uuid},IP-Address;{self.ip}")
         # for i in range(self.max_users):
         sockets = dict(poll.poll(1000))
         if socket in sockets:
@@ -140,7 +137,6 @@ class ClientTask(threading.Thread):
             else:
                 print("LEAVE STATUS : FAILURE")
                 
-            # tprint(f'Client {identity} received: {msg.decode()}')
         socket.close()
         context.term()
     def send_message(self):
@@ -168,10 +164,30 @@ class ClientTask(threading.Thread):
             else:
                 print("MESSAGE SENT STATUS : FAILURE")
                 
-            # tprint(f'Client {identity} received: {msg.decode()}')
         socket.close()
         context.term()
         pass
+    def print_messages(self,messages):
+        if(len(messages)==0):
+            print("NO MESSAGES TO DISPLAY")
+            return
+    # Calculate the maximum widths for timestamp and message
+        max_timestamp_width = max(len(lst[1]) for lst in messages)
+        max_message_width = max(len(lst[0]) for lst in messages)
+
+        # Print the header with appropriate width
+        print(f"={'=' * (max_timestamp_width + 2)}={'=' * (max(max_message_width,7) + 2)}=")
+        print(f"| {'Time stamp':<{max_timestamp_width}} | {'Message':<{max_message_width}} |")
+        print(f"={'=' * (max_timestamp_width + 2)}={'=' * (max(max_message_width,7) + 2)}=")
+
+        # Print messages with appropriate width
+        for lst in messages:
+            timestamp = lst[1]
+            message = lst[0]
+            print(f"| {timestamp:<{max_timestamp_width}} | {message:<{max_message_width}} |")
+        print(f"={'=' * (max_timestamp_width + 2)}={'=' * (max(max_message_width,7) + 2)}=")
+        print("\n")
+
     def fetch_messages(self):
         choice=int(input("Select Server number  :"))
         timestamp=input("Enter the timestamp(YYYY-MM-DDTHH:MM:SS) :")
@@ -185,19 +201,21 @@ class ClientTask(threading.Thread):
         socket.connect(f'tcp://{gs_ip}:{gs_port}')
         poll = zmq.Poller()
         poll.register(socket, zmq.POLLIN)
-        socket.send_string(f"type;get_messages,UUID;{self.uuid},IP-Address;{self.ip},timestamp;{timestamp}")
+        if(len(timestamp)==0):
+            socket.send_string(f"type;get_messages,UUID;{self.uuid},IP-Address;{self.ip}")
+        else:
+            socket.send_string(f"type;get_messages,UUID;{self.uuid},IP-Address;{self.ip},timestamp;{timestamp}")
         # for i in range(self.max_users):
         sockets = dict(poll.poll(1000))
         if socket in sockets:
             msg = socket.recv()
             response=msg.decode()
-            print(response)
+            self.print_messages(json.loads(response))
             # if(response=="SUCCESS"):
             #     print("MESSAGES FETCHED STATUS : SUCCESS")
             # else:
             #     print("MESSAGES FETCHED STATUS : FAILURE")
                 
-            # tprint(f'Client {identity} received: {msg.decode()}')
         socket.close()
         context.term()
         pass
@@ -217,12 +235,12 @@ class ClientTask(threading.Thread):
                 self.leaveServer()   
                 pass
             elif(user_input==4):
-                self.showServerList("\nENTER SERVER NUMBER TO SEND MESSAGE",self.serverList)  
+                self.showServerList("\nENTER SERVER NUMBER TO SEND MESSAGE",self.joinedServer)  
             
                 self.send_message()
                 
             elif(user_input==5):
-                self.showServerList("\nENTER SERVER NUMBER TO FTECH MESSAGE",self.serverList)  
+                self.showServerList("\nENTER SERVER NUMBER TO FTECH MESSAGE",self.joinedServer)  
                 
                 self.fetch_messages()
                 
