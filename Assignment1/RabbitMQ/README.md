@@ -28,13 +28,13 @@ To use the project, follow the steps below:
 3. Use the `User.py` script to interact with the project from a user's perspective.
 
 Sample commands:
-`python YoutubeServer.py`
-`python Youtuber.py Weeknd Starboy`
-`python Youtuber.py Alan Alone`
-`python User.py user1 s Weeknd`
-`python User.py user1 u Weeknd`
-`python User.py user2 s Alan`
-`python Youtuber.py Weeknd After Hours`
+`python3 YoutubeServer.py`
+`python3 Youtuber.py Weeknd Starboy`
+`python3 Youtuber.py Alan Alone`
+`python3 User.py user1 s Weeknd`
+`python3 User.py user1 u Weeknd`
+`python3 User.py user2 s Alan`
+`python3 Youtuber.py Weeknd After Hours`
 
 ## Acknowledgements
 
