@@ -180,7 +180,7 @@ class Group_Server:
         self.port=port
         self.ip=ip
     def isResistered(self):
-        self.socket.send_json({"type":"join","UUID":self.id,"IP-Address":{self.ip},"Port":self.port})
+        self.socket.send_json({"type":"join","UUID":self.id,"IP-Address":self.ip,"Port":self.port})
         response = self.socket.recv_json()
         if(response["status"]=="SUCCESS"):
             return True
