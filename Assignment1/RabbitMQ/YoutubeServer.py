@@ -4,7 +4,7 @@ import pika
 import json
 import threading
 
-connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+connection = pika.BlockingConnection(pika.ConnectionParameters('127.0.0.1'))
 channel = connection.channel()
 
 # stores the subscriptions of each user; keys are usernames and values are sets of subscribed YouTuber names.
@@ -24,7 +24,7 @@ def consume_user_requests():
     while 1:
         time.sleep(0.1)
         try:
-            connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+            connection = pika.BlockingConnection(pika.ConnectionParameters('127.0.0.1'))
             channel = connection.channel()
             def callback(ch, method, properties, body):
                 request = json.loads(body.decode())
@@ -113,7 +113,7 @@ def consume_youtuber_requests():
     while 1:
         time.sleep(0.1)
         try:    
-            connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+            connection = pika.BlockingConnection(pika.ConnectionParameters('127.0.0.1'))
             channel = connection.channel()
             def callback(ch, method, properties, body):
                 request = json.loads(body.decode())
@@ -159,7 +159,7 @@ def notify_users():
     # while 1:
     #     time.sleep(0.1)
     #     try:
-            connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+            connection = pika.BlockingConnection(pika.ConnectionParameters('127.0.0.1'))
             channel = connection.channel()
             # channel.queue_declare(queue='user_notifications', durable=True) # notifications for user
             

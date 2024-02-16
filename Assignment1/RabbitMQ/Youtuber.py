@@ -2,7 +2,7 @@ import pika
 import sys
 import json
 
-connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+connection = pika.BlockingConnection(pika.ConnectionParameters('35.223.43.223'))
 channel = connection.channel()
 
 def publishVideo(youtuber, videoName):
