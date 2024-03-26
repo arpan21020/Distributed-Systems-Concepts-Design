@@ -10,6 +10,8 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
         self.items = {}  
         self.wishlists = {}  
         self.buyers = {} 
+        self.rating={}
+        self.rate={}
 
     def RegisterSeller(self, request, context):
         seller_address = request.address
@@ -28,6 +30,11 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
             )
 
     def SellItem(self, request, context):
+        if request.uuid not in self.sellers.values():
+            print("seller not registered yet")
+            return shopping_pb2.SellItemResponse(
+                result=shopping_pb2.SellItemResponse.FAIL
+            )
         item_id = len(self.items) + 1
         item = {
             "id": item_id,
@@ -182,7 +189,7 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
                             rating=i["rating"],
                         )
                     )
-                print(f"Market prints: Search request for all items, Category: all")
+                # print(f"Market prints: Search request for all items, Category: all")
                 return shopping_pb2.SearchResponse(items=lst)
             else:
                 seller_items = [
@@ -208,9 +215,9 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
                             rating=i["rating"],
                         )
                     )
-                print(
-                    f"Market prints: Search request for all items, Category: {category}"
-                )
+                # print(
+                #     f"Market prints: Search request for all items, Category: {category}"
+                #
                 return shopping_pb2.SearchResponse(items=lst)
         else:
             seller_items = [
@@ -218,6 +225,10 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
                 for item in self.items.values()
                 if item["name"].lower() == item_name.lower()
             ]
+            if category !=seller_items[0]["category"]+1 and category!=4:
+                print("No such item in entered category")
+                return shopping_pb2.SearchResponse(items=lst)
+
             if category == 0:
                 category = "ELECTRONICS"
             elif category == 1:
@@ -236,9 +247,9 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
                         rating=item["rating"],
                     )
                 )
-            print(
-                f"Market prints: Search request for Item : {item_name}, Category: {category}"
-            )
+            # print(
+            #     f"Market prints: Search request for Item : {item_name}, Category: {category}"
+            # )
             return shopping_pb2.SearchResponse(items=lst)
 
     def BuyItem(self, request, context):
@@ -312,9 +323,22 @@ class MarketServicer(shopping_pb2_grpc.MarketServicer):
         if item_id not in self.items:
             print("item id not found")
             return shopping_pb2.RateResponse(result=shopping_pb2.RateResponse.FAIL)
+        elif buyer_address in self.rating:
+            if item_id in self.rating[buyer_address]:
+                print("You have already rated this item")
+                return shopping_pb2.RateResponse(result=shopping_pb2.RateResponse.FAIL)
+        
+        if buyer_address not in self.rating:
+            self.rating[buyer_address] = []
+        self.rating[buyer_address].append(item_id)
 
+        if item_id not in self.rate:
+            self.rate[item_id] = 0
         item = self.items[item_id]
-        item["rating"] = rating
+        fin_rate= (item["rating"] * self.rate[item_id]+rating)/(self.rate[item_id]+1)
+        self.rate[item_id] = self.rate[item_id] + 1
+     
+        item["rating"] = fin_rate
 
         print(
             f"Market prints: {buyer_address} rated item {item_id} with {rating} stars."
