@@ -103,6 +103,24 @@ class RaftClusterServicer(raft_pb2_grpc.RaftClusterServicer):
             self.data[i.key] = i.value
             self.log.append([i.term, i.key, i.value])
 
+        with open(f"logs_node_{globalfile}/logs.txt", "w+") as f:
+            # [[0,"key","value"],[1,"key","value"]
+            log_contents = ""
+            if len(self.log) > 0:
+                for i in range(1, len(self.log)):
+                    if self.log[i][1] == "NO-OP":
+                        log_contents += f"NO-OP {self.log[i][0]}\n"
+                    else:
+                        log_contents += (
+                            "SET "
+                            + self.log[i][1]
+                            + " "
+                            + self.log[i][2]
+                            + " "
+                            + str(self.log[i][0])
+                            + "\n"
+                        )
+            f.write(log_contents)
         print(f"AppendEntry to {self.ip}:{self.port } at term {self.term }")
         self.commitIndex = request.leaderCommit
 
@@ -307,6 +325,25 @@ class RaftClusterServicer(raft_pb2_grpc.RaftClusterServicer):
             self.state = 2
             print(f"Leader elected {self.ip}:{self.port } at term {self.term }")
             self.leader_id = self.ip + ":" + self.port
+            self.log.append([self.term, "NO-OP", "0"])
+            with open(f"logs_node_{globalfile}/logs.txt", "w+") as f:
+                # [[0,"key","value"],[1,"key","value"]
+                log_contents = ""
+                if len(self.log) > 0:
+                    for i in range(1, len(self.log)):
+                        if self.log[i][1] == "NO-OP":
+                            log_contents += f"NO-OP {self.log[i][0]}\n"
+                        else:
+                            log_contents += (
+                                "SET "
+                                + self.log[i][1]
+                                + " "
+                                + self.log[i][2]
+                                + " "
+                                + str(self.log[i][0])
+                                + "\n"
+                            )
+                f.write(log_contents)
             self.leader_lease = ThreadTimer(
                 self.lease_duration, self.leader_lease.renew_leader_lease
             )
@@ -354,6 +391,25 @@ class RaftClusterServicer(raft_pb2_grpc.RaftClusterServicer):
                 value = req[2]
                 self.data[key] = value
                 self.log.append([self.term, key, value])
+                with open(f"logs_node_{globalfile}/logs.txt", "w+") as f:
+                    # [[0,"key","value"],[1,"key","value"]
+                    log_contents = ""
+                    if len(self.log) > 0:
+                        for i in range(1, len(self.log)):
+                            if self.log[i][1] == "NO-OP":
+                                log_contents += f"NO-OP {self.log[i][0]}\n"
+                            else:
+                                log_contents += (
+                                    "SET "
+                                    + self.log[i][1]
+                                    + " "
+                                    + self.log[i][2]
+                                    + " "
+                                    + str(self.log[i][0])
+                                    + "\n"
+                                )
+                    f.write(log_contents)
+
                 return raft_pb2.ServeClientReply(
                     Data="Key-Value pair added", LeaderID=self.leader_id, Success=True
                 )
