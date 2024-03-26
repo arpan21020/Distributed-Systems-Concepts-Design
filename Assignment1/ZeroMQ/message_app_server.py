@@ -33,16 +33,16 @@
 
 import zmq
 import json
-
+import sys
 class Message_Server:
     
-    def __init__(self):
+    def __init__(self,port):
         self.context = zmq.Context()
         self.socket = self.context.socket(zmq.REP)
-        self.socket.bind("tcp://*:5555")
+        self.socket.bind(f"tcp://*:{port}")
         self.group_list=[]
     def print_details(self):
-        print("Socket is listenting on port 5555.......")
+        print(f"Socket is listenting on port {port}.......")
         
     def register_group(self,details):
         if(details in self.group_list):
@@ -63,7 +63,8 @@ class Message_Server:
         return self.group_list
 
 if __name__ == "__main__":
-    message_server = Message_Server()
+    port=sys.argv[1]
+    message_server = Message_Server(port)
     message_server.print_details()
 
     while True:

@@ -44,11 +44,14 @@ import json
 
 class ClientTask(threading.Thread):
     """ClientTask"""
-    def __init__(self, ip,uuid):
+    def __init__(self, ip,uuid,message_server_ip,message_server_port):
         self.ip = ip
         self.uuid=uuid
+        self.message_server_ip=message_server_ip
+        self.message_server_port=message_server_port
         self.serverList=[]
         self.joinedServer=[]
+        
         threading.Thread.__init__(self)
         
     def menu(self):
@@ -69,7 +72,7 @@ class ClientTask(threading.Thread):
     def getServerList(self):
         context2 = zmq.Context()
         socket2 = context2.socket(zmq.REQ)
-        socket2.connect("tcp://localhost:5555")
+        socket2.connect(f"tcp://{message_server_ip}:{message_server_port}")
         socket2.send_json({"type":"get_group_list","UUID":self.uuid,"IP-Address":self.ip})
         message2 = socket2.recv_json()
         self.serverList=message2['grouplist']
@@ -254,17 +257,19 @@ class ClientTask(threading.Thread):
 
         
 
-def main(ip):
+def main(ip,message_server_ip,message_server_port):
     # port1 = input("Enter the port number for server 1: ")
     # port2 = input("Enter the port number for server 2: ")
     
     # port2=5573
     uid=str(uuid.uuid4())
     
-    user=ClientTask(ip,uid)
+    user=ClientTask(ip,uid,message_server_ip,message_server_port)
     user.start()
     user.join()
 
 if __name__ == "__main__":
     ip=sys.argv[1]
-    main(ip)
+    message_server_ip=sys.argv[2]
+    message_server_port=sys.argv[3]
+    main(ip,message_server_ip,message_server_port)
