@@ -125,7 +125,7 @@ class RaftClusterServicer(raft_pb2_grpc.RaftClusterServicer):
                 # dump "Node {NodeID of follower} rejected AppendEntries RPC from {NodeID of leader}."
                 with open(f"logs_node_{globalfile}/dump.txt", "a") as f:
                     f.write(
-                        f"Node {self.ip+":"+self.port} rejected AppendEntries RPC from {request.leaderId}.\n"
+                        f"Node {self.ip}:{self.port} rejected AppendEntries RPC from {request.leaderId}.\n"
                     )
                 return raft_pb2.AppendEntryReply(term=self.term, success=False)
         except:
@@ -142,7 +142,7 @@ class RaftClusterServicer(raft_pb2_grpc.RaftClusterServicer):
             # dump "Node {NodeID of follower} rejected AppendEntries RPC from {NodeID of leader}."
             with open(f"logs_node_{globalfile}/dump.txt", "a") as f:
                 f.write(
-                    f"Node {self.ip+":"+self.port} rejected AppendEntries RPC from {request.leaderId}.\n"
+                    f"Node {self.ip}:{self.port} rejected AppendEntries RPC from {request.leaderId}.\n"
                 )
             return raft_pb2.AppendEntryReply(term=self.term, success=False)
 
@@ -178,12 +178,12 @@ class RaftClusterServicer(raft_pb2_grpc.RaftClusterServicer):
         # dump "Node {NodeID of follower} (follower) committed the entry {entry operation} to the state machine."
         with open(f"logs_node_{globalfile}/dump.txt", "a") as f:
             f.write(
-                f"Node {self.ip+":"+self.port} (follower) committed the entry SET {self.log[self.commitIndex][1]} {self.log[self.commitIndex][2]} to the state machine.\n"
+                f"Node {self.ip}:{self.port} (follower) committed the entry SET {self.log[self.commitIndex][1]} {self.log[self.commitIndex][2]} to the state machine.\n"
             )
         # dump "Node {NodeID of follower} rejected AppendEntries RPC from {NodeID of leader}."
         with open(f"logs_node_{globalfile}/dump.txt", "a") as f:
             f.write(
-                f"Node {self.ip+":"+self.port} accepted AppendEntries RPC from {request.leaderId}.\n"
+                f"Node {self.ip}:{self.port} accepted AppendEntries RPC from {request.leaderId}.\n"
             )
         return raft_pb2.AppendEntryReply(term=self.term, success=True)
 
@@ -331,7 +331,7 @@ class RaftClusterServicer(raft_pb2_grpc.RaftClusterServicer):
             # dump "Node {NodeID of leader} (leader) committed the entry {entry operation} to the state machine."
             with open(f"logs_node_{globalfile}/dump.txt", "a") as f:
                 f.write(
-                    f"Node {self.ip+":"+self.port} (leader) committed the entry SET {self.log[self.commitIndex][1]} {self.log[self.commitIndex][2]} to the state machine.\n"
+                    f"Node {self.ip}:{self.port} (leader) committed the entry SET {self.log[self.commitIndex][1]} {self.log[self.commitIndex][2]} to the state machine.\n"
                 )
             # print(response)
 
@@ -340,7 +340,7 @@ class RaftClusterServicer(raft_pb2_grpc.RaftClusterServicer):
         # dump "Node {NodeID} election timer timed out, Starting election."
         with open(f"logs_node_{globalfile}/dump.txt", "a") as f:
                 f.write(
-                    f"Node {self.ip+":"+self.port} election timer timed out, Starting election.\n"
+                    f"Node {self.ip}:{self.port} election timer timed out, Starting election.\n"
                 )
         # Record the start time
         start_time = time.time()
@@ -415,7 +415,7 @@ class RaftClusterServicer(raft_pb2_grpc.RaftClusterServicer):
             # dump "Node {NodeID} became the leader for term {TermNumber}."
             with open(f"logs_node_{globalfile}/dump.txt", "a") as f:
                 f.write(
-                    f"Node {self.ip+":"+self.port} became the leader for term {self.term}.\n"
+                    f"Node {self.ip}:{self.port} became the leader for term {self.term}.\n"
                 )
             self.state = 2
             print(f"Leader elected {self.ip}:{self.port } at term {self.term }")
@@ -455,14 +455,14 @@ class RaftClusterServicer(raft_pb2_grpc.RaftClusterServicer):
                 # dump "Leader {NodeID of Leader} sending heartbeat & Renewing Lease"
                 with open(f"logs_node_{globalfile}/dump.txt", "a") as f:
                     f.write(
-                        f"Leader {self.ip+":"+self.port} sending heartbeat & Renewing Lease\n"
+                        f"Leader {self.ip}:{self.port} sending heartbeat & Renewing Lease\n"
                     )
                 self.sendHeartbeat()
                 time.sleep(self.heartbeatTime)
             # dump "Leader {NodeID of Leader} lease renewal failed. Stepping Down."
             with open(f"logs_node_{globalfile}/dump.txt", "a") as f:
                 f.write(
-                    f"Leader {self.ip+":"+self.port} lease renewal failed. Stepping Down.\n"
+                    f"Leader {self.ip}:{self.port} lease renewal failed. Stepping Down.\n"
                 )
             if self.state == 0:
                 print("Leader stepped down")
@@ -485,7 +485,7 @@ class RaftClusterServicer(raft_pb2_grpc.RaftClusterServicer):
                 # dump "Node {NodeID of leader} (leader) received an {entry operation} request."
                 with open(f"logs_node_{globalfile}/dump.txt", "a") as f:
                     f.write(
-                        f"Node {self.ip+":"+self.port} (leader) received a {req[0]} request.\n"
+                        f"Node {self.ip}:{self.port} (leader) received a {req[0]} request.\n"
                     )
                     
                 print(
@@ -505,7 +505,7 @@ class RaftClusterServicer(raft_pb2_grpc.RaftClusterServicer):
                 # dump "Node {NodeID of leader} (leader) received an {entry operation} request."
                 with open(f"logs_node_{globalfile}/dump.txt", "a") as f:
                     f.write(
-                        f"Node {self.ip+":"+self.port} (leader) received a {req[0]} request.\n"
+                        f"Node {self.ip}:{self.port} (leader) received a {req[0]} request.\n"
                     )
                 print(
                     f"SET request received at {self.ip}:{self.port } at term {self.term }"
