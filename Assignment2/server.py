@@ -105,7 +105,7 @@ class RaftClusterServicer(raft_pb2_grpc.RaftClusterServicer):
             # dump "Node {NodeID of follower} rejected AppendEntries RPC from {NodeID of leader}."
             with open(f"logs_node_{globalfile}/dump.txt", "a") as f:
                 f.write(
-                    f"Node {self.ip+":"+self.port} rejected AppendEntries RPC from {request.leaderId}.\n"
+                    f"Node {self.ip}:{self.port} rejected AppendEntries RPC from {request.leaderId}.\n"
                 )
             return raft_pb2.AppendEntryReply(term=self.term, success=False)
         # if (request.prevLogIndex == 0):
