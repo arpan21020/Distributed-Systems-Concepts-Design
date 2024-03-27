@@ -1,0 +1,1105 @@
+Vote granted for Node localhost:50055 in term 1.
+Node localhost:50052 (follower) committed the entry SET key value to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET B 2 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET B 2 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET B 2 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET B 2 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET B 2 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET C 3 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET C 3 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET C 3 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET C 3 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET C 3 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET C 3 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET C 3 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET C 3 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET C 3 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET C 3 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET A 1 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET D 4 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET D 4 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET F 6 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET F 6 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET F 6 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET F 6 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET F 6 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET F 6 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET F 6 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50055.
+Vote granted for Node localhost:50051 in term 2.
+Node localhost:50052 rejected AppendEntries RPC from localhost:50055.
+Node localhost:50052 (follower) committed the entry SET F 6 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50053 in term 3.
+Vote denied for Node localhost:50055 in term 3.
+Vote granted for Node localhost:50054 in term 3.
+Vote granted for Node localhost:50053 in term 4.
+Vote denied for Node localhost:50055 in term 4.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 5.
+Vote denied for Node localhost:50054 in term 5.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 6.
+Vote denied for Node localhost:50054 in term 6.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 7.
+Vote denied for Node localhost:50054 in term 7.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 8.
+Vote denied for Node localhost:50054 in term 8.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 9.
+Vote denied for Node localhost:50054 in term 9.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 10.
+Vote denied for Node localhost:50054 in term 10.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 11.
+Vote denied for Node localhost:50054 in term 11.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 12.
+Vote denied for Node localhost:50054 in term 12.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 13.
+Vote denied for Node localhost:50054 in term 13.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 14.
+Vote denied for Node localhost:50054 in term 14.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 15.
+Vote denied for Node localhost:50054 in term 15.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 16.
+Vote denied for Node localhost:50054 in term 16.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 17.
+Vote denied for Node localhost:50054 in term 17.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 18.
+Vote denied for Node localhost:50054 in term 18.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 19.
+Vote denied for Node localhost:50054 in term 19.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 20.
+Vote denied for Node localhost:50054 in term 20.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 21.
+Vote denied for Node localhost:50054 in term 21.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 22.
+Vote denied for Node localhost:50054 in term 22.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 23.
+Vote denied for Node localhost:50054 in term 23.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 24.
+Vote denied for Node localhost:50054 in term 24.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 25.
+Vote denied for Node localhost:50054 in term 25.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 26.
+Vote denied for Node localhost:50054 in term 26.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 27.
+Vote denied for Node localhost:50054 in term 27.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 28.
+Vote denied for Node localhost:50054 in term 28.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 29.
+Vote denied for Node localhost:50054 in term 29.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 30.
+Vote denied for Node localhost:50054 in term 30.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 31.
+Vote denied for Node localhost:50054 in term 31.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 32.
+Vote denied for Node localhost:50054 in term 32.
+Node localhost:50052 election timer timed out, Starting election.
+Vote denied for Node localhost:50055 in term 33.
+Vote denied for Node localhost:50054 in term 33.
+Vote granted for Node localhost:50051 in term 1.
+Node localhost:50052 election timer timed out, Starting election.
+New Leader waiting for Old Leader Lease to timeout.
+Node localhost:50052 became the leader for term 2.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 (leader) received a SET request.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET A 1 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET A 1 to the state machine.
+Node localhost:50052 (leader) received a GET request.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET A 1 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET A 1 to the state machine.
+Node localhost:50052 (leader) received a SET request.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET B 2 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET B 2 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET B 2 to the state machine.
+Node localhost:50052 (leader) received a GET request.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET B 2 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET B 2 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET B 2 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET B 2 to the state machine.
+Node localhost:50052 (leader) received a SET request.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Node localhost:50052 (leader) received a GET request.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Leader localhost:50052 sending heartbeat & Renewing Lease
+Node localhost:50052 (leader) committed the entry SET C 3 to the state machine.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 election timer timed out, Starting election.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Vote granted for Node localhost:50053 in term 8.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50053.
+Vote granted for Node localhost:50051 in term 9.
+Node localhost:50052 (follower) committed the entry SET E 5 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 11.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 13.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 15.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 17.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 (follower) committed the entry SET NO-OP 0 to the state machine.
+Node localhost:50052 accepted AppendEntries RPC from localhost:50051.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 19.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 21.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 23.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 25.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 27.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 29.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 31.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 33.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 35.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 37.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 39.
+Node localhost:50052 election timer timed out, Starting election.
+Vote granted for Node localhost:50051 in term 41.

@@ -1,0 +1,3 @@
+CommitIndex :9
+Term :17
+NodeID :localhost:50051

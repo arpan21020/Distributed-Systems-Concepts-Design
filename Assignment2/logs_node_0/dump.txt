@@ -1,0 +1,168 @@
+New Leader waiting for Old Leader Lease to timeout.
+Node localhost:50051 became the leader for term 17.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Node localhost:50051 (leader) received a GET request.
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Node localhost:50051 (leader) received a GET request.
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Node localhost:50051 (leader) received a GET request.
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Node localhost:50051 (leader) committed the entry SET NO-OP 0 to the state machine.
+Leader localhost:50051 sending heartbeat & Renewing Lease
+Node localhost:50051 (leader) received a GET request.
+Error occurred while sending RPC to Node localhost:50053.
+Error occurred while sending RPC to Node localhost:50054.
+Error occurred while sending RPC to Node localhost:50055.
+Leader localhost:50051 lease renewal failed. Stepping Down.
+localhost:50051 Stepping down
+Vote granted for Node localhost:50052 in term 18.
+Node localhost:50051 election timer timed out, Starting election.
+Vote granted for Node localhost:50052 in term 20.
+Node localhost:50051 election timer timed out, Starting election.
+Vote granted for Node localhost:50052 in term 22.
+Node localhost:50051 election timer timed out, Starting election.
+Vote granted for Node localhost:50052 in term 24.
+Node localhost:50051 election timer timed out, Starting election.
+Vote granted for Node localhost:50052 in term 26.
+Node localhost:50051 election timer timed out, Starting election.
+Vote granted for Node localhost:50052 in term 28.
+Node localhost:50051 election timer timed out, Starting election.
+Vote granted for Node localhost:50052 in term 30.
+Node localhost:50051 election timer timed out, Starting election.
+Vote granted for Node localhost:50052 in term 32.
+Node localhost:50051 election timer timed out, Starting election.
+Vote granted for Node localhost:50052 in term 34.
+Node localhost:50051 election timer timed out, Starting election.
+Vote granted for Node localhost:50052 in term 36.
+Node localhost:50051 election timer timed out, Starting election.
+Vote granted for Node localhost:50052 in term 38.
+Node localhost:50051 election timer timed out, Starting election.
+Vote granted for Node localhost:50052 in term 40.
+Node localhost:50051 election timer timed out, Starting election.
