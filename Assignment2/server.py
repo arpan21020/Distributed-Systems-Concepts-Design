@@ -602,7 +602,7 @@ if __name__ == "__main__":
         node = RaftClusterServicer(f[0], f[1], nodeLists)
         server = grpc.server(futures.ThreadPoolExecutor(max_workers=6))
         raft_pb2_grpc.add_RaftClusterServicer_to_server(node, server)
-        server.add_insecure_port(nodeLists[i])
+        server.add_insecure_port("[::]:" + f[1])
         server.start()
         print("Term:    ", node.term)
         if recovery(node):
