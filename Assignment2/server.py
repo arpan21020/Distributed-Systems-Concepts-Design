@@ -591,11 +591,11 @@ if __name__ == "__main__":
     # print(type(x))
     try:
         nodeLists = [
-            "localhost:50051",
-            "localhost:50052",
-            "localhost:50053",
-            "localhost:50054",
-            "localhost:50055",
+            "104.197.253.69:50051",
+            "35.192.92.64:50052",
+            "34.70.153.236:50053",
+            "34.133.105.227:50054",
+            "34.133.50.24:50055",
         ]
         logging.basicConfig()
         f = nodeLists[i].split(":")
