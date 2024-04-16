@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+// Mapper service
+service Mapper {
+  rpc GivereducerInput(ReducerInputRequest) returns (ReducerOutput);
+  rpc call_mapper(InputSplitRequest) returns (mapreturn);
+}
+
+// Reducer service
+service Reducer {
+  rpc call_reducer(reducerinput) returns (Reducereturn);
+}
+
+// // Master service
+// service Master {
+//   // rpc callMapper(InputSplitRequest) returns (IntermediateKeyValue);
+//   // rpc callReducer(ReducerInputRequest) returns (ReducerInput);
+// }
+
+
+message mapreturn {
+  bool success = 1;
+}
+
+
+message Reducereturn {
+  bool success = 1;
+  string reduce_output = 2;
+}
+
+message centroids{
+  float x = 1;
+  float y = 2;
+}
+
+message reducerinput{
+  int32 reducer_id = 1;
+  repeated centroids centroidlist = 2;
+  int32 num_mappers = 3;
+  repeated string mappers = 4;
+}
+
+message InputSplitRequest {
+  int32 startidx = 1;
+  int32 endidx = 2;
+  repeated centroids centroidlist = 3;
+  int32 mapper_id = 4;
+  int32 no_reducers=5;
+}
+
+
+message trio{
+  float x = 1;
+  float y = 2;
+  int32 centroidId = 3;
+}
+
+message ReducerInputRequest {
+  int32 reducer_id = 1;
+}
+
+
+message ReducerOutput {
+  // map<int32, repeated IntermediateKeyValue> key_values = 2;
+  bool success = 1;
+  repeated trio map_outputs = 2;
+}
+
+
+//python3 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. kmeans.proto --pyi_out=. x
