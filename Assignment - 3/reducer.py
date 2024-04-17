@@ -54,9 +54,9 @@ class Reducer(kmeans_pb2_grpc.ReducerServicer):
             self.num_mappers = request.num_mappers
             cent = request.centroidlist
             self.mappers = request.mappers
-            # if self.reducer_id%2==0 and random.random() < 0.5:
-            #     print("Reducer failed due to probabilistic failure")
-            #     return kmeans_pb2.Reducereturn(success=False,reduce_output="Failure")
+            if self.reducer_id%2==0 and random.random() < 0.5:
+                print("Reducer failed due to probabilistic failure")
+                return kmeans_pb2.Reducereturn(success=False,reduce_output="Failure")
             if request.second == -1:
                 with open(f"Data/Reducers/R{self.reducer_id+1}.txt", "w") as f:
                     f.write("")

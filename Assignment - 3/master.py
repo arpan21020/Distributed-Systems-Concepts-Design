@@ -133,6 +133,7 @@ class Master:
         print(f"{self.max_iterations} iterations have completed")
         if (isConverged):
             print("Input converged at iteration: ", i+1)
+            f1.write(f"Input converged at iteration: {i+1}\n")
         else :
             print("Input did not converge")
         print("Final Centroids: ")
@@ -325,14 +326,14 @@ if __name__ == "__main__":
     # r = sys.argv[2]
     # k = sys.argv[3]
     
-    # m = int(input("Enter the number of mappers: "))
-    # r = int(input("Enter the number of reducers: "))
-    # k = int(input("Enter the number of centroids: "))
-    # max_iterations = int(input("Enter the maximum number of iterations: "))
-    m = 2
-    r = 2
-    k = 3
-    max_iterations = 20
+    m = int(input("Enter the number of mappers: "))
+    r = int(input("Enter the number of reducers: "))
+    k = int(input("Enter the number of centroids: "))
+    max_iterations = int(input("Enter the maximum number of iterations: "))
+    # m = 2
+    # r = 2
+    # k = 3
+    # max_iterations = 20
     for id in range(m):
         # if(id==1):
         #     continue

@@ -134,10 +134,10 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
             self.isProbabilisticFailure = False
 
             #probabilistic function of mapper failure
-            # if ((request.mapper_id%2==0) and (random.random() < 0.5)):
-            #     print("Mapper failed due to probabilistic failure")
-            #     self.isProbabilisticFailure = True
-            #     return kmeans_pb2.mapreturn(success=False)
+            if ((request.mapper_id%2==0) and (random.random() < 0.5)):
+                print("Mapper failed due to probabilistic failure")
+                self.isProbabilisticFailure = True
+                return kmeans_pb2.mapreturn(success=False)
 
             self.centroids = []
             for c in cent:
