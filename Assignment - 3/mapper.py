@@ -8,7 +8,7 @@ from math import *
 import logging
 import sys
 import os
-
+import time
 
 class Mapper(kmeans_pb2_grpc.MapperServicer):
 
@@ -27,7 +27,7 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
 
     def map(self):
         self.output = []
-        print("Centroids: ",self.centroids)
+        # print("Centroids: ",self.centroids)
         
         # Process each data point in the input split
         for i in range(self.end_index-self.start_index):
@@ -41,7 +41,7 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
             # Find the nearest centroid for the data point
             
             nearest_centroid = self.find_nearest_centroid(data_point)
-            print("Nearest Centroid: ",nearest_centroid)
+            # print("Nearest Centroid: ",nearest_centroid)
             # Output the key-value pair
             # output = f"{nearest_centroid},{data_point[0]},{data_point[1]}"
             # Write the output to a file in the mapper's directory
@@ -51,7 +51,7 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
             #     self.output[nearest_centroid] = []
             # self.output[nearest_centroid].append(data_point)
         # print(self.output)
-        print("Output: ",self.output)
+        # print("Output: ",self.output)
         return self.output
 
     def find_nearest_centroid(self, data_point):
@@ -80,7 +80,7 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
         # print("distance:",distance)
         return distance
 
-    def partition(self, num_reducers, map_out):
+    def partition(self, num_reducers, map_out,append_flg):
         partitions = [[] for _ in range(num_reducers)]
         # print("Map_out: ",map_out,"---------------------------------------")
         for dict in map_out:
@@ -93,53 +93,72 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
                 # print("no of reducers: ",num_reducers)
                 # print()
                 partitions[partition_index].append((key, value))
-        for partition in partitions:
-            print(partition)
+        # for partition in partitions:
+        #     print(partition)
         for i, partition in enumerate(partitions):
-            with open(
-                f"Data/Mappers/M{self.MapperID+1}/partition_{i+1}.txt", "w"
-            ) as file:
-                for key, value in partition:
-                    file.write(f"{key},{value[0]},{value[1]}\n")
-            with open(
-                f"M{self.MapperID+1}_partition_{i+1}.txt", "a"
-            ) as file:
-                for key, value in partition:
-                    file.write(f"{key},{value[0]},{value[1]}\n")
-            with open(
-                f"M{self.MapperID+1}_partition_{i+1}.txt", "a"
-            ) as file:
-                file.write("-------------------------------------------\n")
+            if append_flg==False:
+                with open(
+                    f"Data/Mappers/M{self.MapperID+1}/partition_{i+1}.txt", "w"
+                ) as file:
+                    for key, value in partition:
+                        file.write(f"{key},{value[0]},{value[1]}\n")
+            else:
+                with open(
+                    f"Data/Mappers/M{self.MapperID+1}/partition_{i+1}.txt", "a"
+                ) as file:
+                    for key, value in partition:
+                        file.write(f"{key},{value[0]},{value[1]}\n")
+            # with open(
+            #     f"M{self.MapperID+1}_partition_{i+1}.txt", "a"
+            # ) as file:
+            #     for key, value in partition:
+            #         file.write(f"{key},{value[0]},{value[1]}\n")
+            # with open(
+            #     f"M{self.MapperID+1}_partition_{i+1}.txt", "a"
+            # ) as file:
+            #     file.write("-------------------------------------------\n")
         # done
 
     def call_mapper(self, request, context):
-        print("*************************************Mapper called*********************************************")
-        # Extract the input parameters
-        self.start_index = request.startidx
-        self.end_index = request.endidx
-        cent = request.centroidlist
-        self.centroids = []
-        for c in cent:
-            self.centroids.append([c.x, c.y])
-        self.MapperID = request.mapper_id
-        self.num_reducers = request.no_reducers
-        dir_path = f"Data/Mappers/M{request.mapper_id+1}"
-        if not os.path.exists(dir_path):
-            os.makedirs(dir_path)
+        try:
+            # print("*************************************Mapper called*********************************************")
+            # Extract the input parameters
+            self.start_index = request.startidx
+            self.end_index = request.endidx
+            cent = request.centroidlist
+            append_flag = request.append
+            self.centroids = []
+            for c in cent:
+                self.centroids.append([c.x, c.y])
+            self.MapperID = request.mapper_id
+            self.num_reducers = request.no_reducers
+            dir_path = f"Data/Mappers/M{request.mapper_id+1}"
+            if not os.path.exists(dir_path):
+                os.makedirs(dir_path)
 
-        with open("Data/Input/points.txt", "r") as file:
-            points = file.readlines()
-            self.data=[]
-            for i in range(self.start_index, self.end_index):
-                point = points[i].split(",")
-                self.data.append([float(point[0]), float(point[1])])
+            with open("Data/Input/points.txt", "r") as file:
+                points = file.readlines()
+                self.data=[]
+                for i in range(self.start_index, self.end_index):
+                    point = points[i].split(",")
+                    self.data.append([float(point[0]), float(point[1])])
 
-        map_out = self.map()
-        self.partition(self.num_reducers, map_out)
-        return kmeans_pb2.mapreturn(success=True)
+            map_out = self.map()
+            print(f"Mapper {self.MapperID+1} completed mapping")
+            
+            self.partition(self.num_reducers, map_out,append_flag)
+            print(f"Mapper {self.MapperID+1} completed partitioning")
+            return kmeans_pb2.mapreturn(success=True)
+        except KeyboardInterrupt:
+            print("Failure in Mapper: ", self.MapperID)
+            with open(f"Data/Mappers/M{self.MapperID+1}/partition_{i+1}.txt", "w") as file:
+                file.write("")
+            return kmeans_pb2.mapreturn(success=False)
+
 
     def GivereducerInput(self, request, context):
         requestID = request.reducer_id
+        print(f"Reducer {requestID+1} requested Mapper {self.MapperID+1} for input")
         with open(
             f"Data/Mappers/M{self.MapperID+1}/partition_{requestID+1}.txt", "r"
         ) as file:
@@ -153,7 +172,8 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
                     x=float(d[1]), y=float(d[2]), centroidId=int(d[0])
                 )
                 l.append(temp)
-            print("-------------------------------------------")
+            # print("-------------------------------------------")
+            print("Input has been sent to Reducer ", requestID+1)
             return kmeans_pb2.ReducerOutput(success=True, map_outputs=l)
 
 

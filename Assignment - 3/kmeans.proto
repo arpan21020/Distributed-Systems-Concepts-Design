@@ -46,6 +46,7 @@ message InputSplitRequest {
   repeated centroids centroidlist = 3;
   int32 mapper_id = 4;
   int32 no_reducers=5;
+  bool append = 6;
 }
 
 

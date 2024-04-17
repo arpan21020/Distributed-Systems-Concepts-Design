@@ -42,8 +42,8 @@ class Reducer(kmeans_pb2_grpc.ReducerServicer):
 
         with open(f"Data/Reducers/R{self.reducer_id+1}.txt", "a") as f:
             f.write(f"{centroidId},{x},{y}\n")
-        with open(f"R{self.reducer_id+1}.txt", "a") as f:
-            f.write(f"{centroidId},{x},{y}\n")
+        # with open(f"R{self.reducer_id+1}.txt", "a") as f:
+        #     f.write(f"{centroidId},{x},{y}\n")
         return centroidId, (x, y)
 
     def call_reducer(self, request, context):
@@ -54,29 +54,31 @@ class Reducer(kmeans_pb2_grpc.ReducerServicer):
             self.mappers = request.mappers
             with open(f"Data/Reducers/R{self.reducer_id+1}.txt", "w") as f:
                 f.write("")
-            with open(f"R{self.reducer_id+1}.txt", "a") as f:
-                f.write("-------------------------------------------\n")
+            # with open(f"R{self.reducer_id+1}.txt", "a") as f:
+            #     f.write("-------------------------------------------\n")
             l = []
             for c in cent:
                 l.append([c.x, c.y])
             self.centroids = l
             trio_list = []
             for id in self.mappers:
-                channel = grpc.insecure_channel(id)  # mapper IP:port
-                stub = kmeans_pb2_grpc.MapperStub(channel)
-                response = stub.GivereducerInput(
-                    kmeans_pb2.ReducerInputRequest(reducer_id=self.reducer_id)
-                )
-                if response.success == True:
-                    temp = response.map_outputs
-                    # print("TEMP", temp)
-                    for t in temp:
-                        trio_list.append([t.x, t.y, t.centroidId])
+                try:
+                    channel = grpc.insecure_channel(id)  # mapper IP:port
+                    stub = kmeans_pb2_grpc.MapperStub(channel)
+                    response = stub.GivereducerInput(
+                        kmeans_pb2.ReducerInputRequest(reducer_id=self.reducer_id)
+                    )
+                    if response.success == True:
+                        temp = response.map_outputs
+                        # print("TEMP", temp)
+                        for t in temp:
+                            trio_list.append([t.x, t.y, t.centroidId])
                 # print("TRIO LIST", trio_list)
-
+                except:
+                    continue
             self.shuffle_and_sort(trio_list)
-            print("TRIO---------------")
-            print(trio_list)
+            # print("TRIO---------------")
+            # print(trio_list)
             for c, v in self.output.items():
                 # print("c:", c, "v: ", v)
                 self.reduce(c, v)
@@ -86,7 +88,8 @@ class Reducer(kmeans_pb2_grpc.ReducerServicer):
             file_read.close()
             return kmeans_pb2.Reducereturn(success=True, reduce_output=str1)
         except KeyboardInterrupt:
-            print(f"Error in Reducer")
+            print(f"Failure in Reducer: {self.reducer_id}")
+            return kmeans_pb2.Reducereturn(success=False, reduce_output="Failure")
 
 def run(port):
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))

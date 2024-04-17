@@ -40,18 +40,20 @@ class reducerinput(_message.Message):
     def __init__(self, reducer_id: _Optional[int] = ..., centroidlist: _Optional[_Iterable[_Union[centroids, _Mapping]]] = ..., num_mappers: _Optional[int] = ..., mappers: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class InputSplitRequest(_message.Message):
-    __slots__ = ("startidx", "endidx", "centroidlist", "mapper_id", "no_reducers")
+    __slots__ = ("startidx", "endidx", "centroidlist", "mapper_id", "no_reducers", "append")
     STARTIDX_FIELD_NUMBER: _ClassVar[int]
     ENDIDX_FIELD_NUMBER: _ClassVar[int]
     CENTROIDLIST_FIELD_NUMBER: _ClassVar[int]
     MAPPER_ID_FIELD_NUMBER: _ClassVar[int]
     NO_REDUCERS_FIELD_NUMBER: _ClassVar[int]
+    APPEND_FIELD_NUMBER: _ClassVar[int]
     startidx: int
     endidx: int
     centroidlist: _containers.RepeatedCompositeFieldContainer[centroids]
     mapper_id: int
     no_reducers: int
-    def __init__(self, startidx: _Optional[int] = ..., endidx: _Optional[int] = ..., centroidlist: _Optional[_Iterable[_Union[centroids, _Mapping]]] = ..., mapper_id: _Optional[int] = ..., no_reducers: _Optional[int] = ...) -> None: ...
+    append: bool
+    def __init__(self, startidx: _Optional[int] = ..., endidx: _Optional[int] = ..., centroidlist: _Optional[_Iterable[_Union[centroids, _Mapping]]] = ..., mapper_id: _Optional[int] = ..., no_reducers: _Optional[int] = ..., append: bool = ...) -> None: ...
 
 class trio(_message.Message):
     __slots__ = ("x", "y", "centroidId")

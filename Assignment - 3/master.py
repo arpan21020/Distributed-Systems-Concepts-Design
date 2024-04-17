@@ -26,6 +26,8 @@ class Master:
         self.mappers = []
         self.reducers = []
         self.successList = [False]*m
+        self.mapfailed = [False]*m # shows if mapper failed or not, true if failed
+        self.reducefailed = [False]*r # shows if reducer failed or not, true if failed
         for i in range(m):
             self.mappers.append("localhost:" + str(portm + i))
         for i in range(r):
@@ -39,7 +41,9 @@ class Master:
 
         # select k random points as initial centroids
         self.centroids = random.sample(self.points, self.num_centroids)
-        print("Initial Centroids: ", self.centroids)
+        print("Initial Centroids: ")
+        for sublist in self.centroids:
+            print(sublist)
 
         for i in range(len(self.centroids)):
             self.new_list.append([0, 0])
@@ -50,26 +54,57 @@ class Master:
         with open("Data/centroids.txt", "w") as f:
             for i in self.centroids:
                 f.write(str(i[0]) + "," + str(i[1]) + "\n")
-
+    
+    def handle_mappers(self):
+        # find working mappers first
+        working_mappers = []
+        for i in range(len(self.mapfailed)):
+            if (self.mapfailed[i]==False):
+                working_mappers.append(i)
+                # self.call_mapper(i)
+                # self.mapfailed[i] = False
+        threads = []
+        # assuming failures are less than working mappers
+        for i in range(len(self.mapfailed)):
+            if (self.mapfailed[i]==True):
+                # choose any of the working mappers randomly and assign it the work of the failed mapper
+                random_mapper = random.choice(working_mappers)
+                # self.call_mapper(random_mapper,reading_index = i)
+                thread = threading.Thread(target=self.call_mapper, args=(random_mapper, True,), kwargs={'reading_index': i})
+                thread.start()
+                threads.append(thread)
+        for t in threads:
+            t.join()
+        
+    def handle_reducers(self):
+        pass
     def InitiateMapReduce(self):
         # for i in range(self.max_iterations):
         isConverged = False
         for i in range(self.max_iterations):
+            print("Iteration", i+1, "started: ")
+            self.mapfailed = [False]*self.num_mappers
+            self.reducefailed = [False]*self.num_reducers
             self.run_mapper()
+            # count True in self.mapfailed
+            if self.mapfailed.count(True) == self.num_mappers:
+                print("All mappers failed. Please Try later.")
+                continue
+            self.handle_mappers()
             self.run_reducer()
-            
-            # print(self.new_list)
             if i != 0 and self.convergence():
                 isConverged = True
                 break
             else:
                 self.centroids = self.new_list.copy()
             self.centroid_compilation()
-            # self
+            print("New Centroids: ", self.centroids)
+            print("-------------------------------------------")
+        print(f"{self.max_iterations} iterations have completed")
         if (isConverged):
-            print("Converged at iteration: ", i+1)
+            print("Input converged at iteration: ", i+1)
         else :
-            print("Not Converged")
+            print("Input did not converge")
         print("Final Centroids: ")
         rounded_data = [[round(num, 2) for num in sublist] for sublist in self.centroids]
 
@@ -98,8 +133,7 @@ class Master:
         print("Mappers Division of Input Data: ", l)
         return l
 
-    def call_mapper(self, id):
-    
+    def call_mapper(self, id,append_flag ,reading_index = -1):
         try:
             node = self.mappers[id]
             channel = grpc.insecure_channel(node)  # mapper IP:port
@@ -109,26 +143,43 @@ class Master:
                 cent.append(
                     kmeans_pb2.centroids(x=self.centroids[i][0], y=self.centroids[i][1])
                 )
-            response = stub.call_mapper(
-                kmeans_pb2.InputSplitRequest(
-                    startidx=self.input_splits[id][0],
-                    endidx=self.input_splits[id][1],
-                    centroidlist=cent,
-                    mapper_id=id,
-                    no_reducers=self.num_reducers,
+            if reading_index == -1:
+                response = stub.call_mapper(
+                    kmeans_pb2.InputSplitRequest(
+                        startidx=self.input_splits[id][0],
+                        endidx=self.input_splits[id][1],
+                        centroidlist=cent,
+                        mapper_id=id,
+                        no_reducers=self.num_reducers,
+                        append = append_flag,
+                    )
                 )
-            )
-            print(f"Response success value for {id}:", response.success)
-            if response.success:
-                # print(id)
-                self.successList[id] = True
-        except KeyboardInterrupt:
-            print("Failure in Mapper: ", id)
+                # print(f"Response success value for Mapper {id}:", response.success)
+                if response.success:
+                    # print(id)
+                    self.successList[id] = True
+                else:
+                    print("Failure in Mapper: ", id)
+                    self.mapfailed[id] = True
+            else : # we have to read from other place, rest everything remains same
+                response = stub.call_mapper(
+                    kmeans_pb2.InputSplitRequest(
+                        startidx=self.input_splits[reading_index][0],
+                        endidx=self.input_splits[reading_index][1],
+                        centroidlist=cent,
+                        mapper_id=id,
+                        no_reducers=self.num_reducers,
+                    )
+                )
+        except grpc.RpcError as e:
+            print("Failure in Mapper:", id+1)
+            self.mapfailed[id] = True
+            # print(e)
 
     def run_mapper(self):
         threads = []
         for id in range(self.num_mappers):
-            t = threading.Thread(target=self.call_mapper, args=(id,))
+            t = threading.Thread(target=self.call_mapper, args=(id,False))
             threads.append(t)
             t.start()
 
@@ -140,7 +191,7 @@ class Master:
         # pass
 
     def call_reducer(self, id):
-        print("CALLING REDUCER")
+        # print("CALLING REDUCER")
         try:
             node = self.reducers[id]
             channel = grpc.insecure_channel(node)  # reducer IP:port
@@ -158,8 +209,12 @@ class Master:
                     mappers=self.mappers,
                 )
             )
+            if (response.success==False):
+                print("Failure in Reducer: ", id)
+                self.reducefailed[id] = True
+                return
             read_output = response.reduce_output
-           
+            
             lst = read_output.split("\n")
             # print(self.new_list,"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn")
             for i in lst:
@@ -167,8 +222,9 @@ class Master:
                     temp = i.split(",")
                     self.new_list[int(temp[0])] = [float(temp[1]), float(temp[2])]
             # print(response.success)
-        except KeyboardInterrupt:
-            print("Failure in Reducer: ", id)
+        except grpc.RpcError as e:
+            self.reducefailed[id] = False
+            print("Failure in Reducer: ", id+1)
 
     def convergence(self):
         if len(self.centroids) != len(self.new_list):
@@ -222,7 +278,7 @@ if __name__ == "__main__":
     # max_iterations = int(input("Enter the maximum number of iterations: "))
     m = 2
     r = 2
-    k = 6
+    k = 2
     max_iterations = 20
     for id in range(m):
         run_python_file(f"mapper.py {50000+id}")
