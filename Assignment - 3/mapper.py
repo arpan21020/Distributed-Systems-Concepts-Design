@@ -22,6 +22,8 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
         # self.map_no = -1
         self.num_reducers = 0
         self.MapperID = 0
+        self.isProbabilisticFailure = False
+        
 
         # print(self.data)
 
@@ -129,6 +131,14 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
             self.end_index = request.endidx
             cent = request.centroidlist
             append_flag = request.append
+            self.isProbabilisticFailure = False
+
+            #probabilistic function of mapper failure
+            # if ((request.mapper_id%2==0) and (random.random() < 0.5)):
+            #     print("Mapper failed due to probabilistic failure")
+            #     self.isProbabilisticFailure = True
+            #     return kmeans_pb2.mapreturn(success=False)
+
             self.centroids = []
             for c in cent:
                 self.centroids.append([c.x, c.y])
@@ -138,7 +148,7 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
             if not os.path.exists(dir_path):
                 os.makedirs(dir_path)
 
-            with open("Data/Input/points.txt", "r") as file:
+            with open("Data/Input/points2.txt", "r") as file:
                 points = file.readlines()
                 self.data=[]
                 for i in range(self.start_index, self.end_index):
@@ -147,7 +157,7 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
 
             map_out = self.map()
             print(f"Mapper {self.MapperID+1} completed mapping")
-            time.sleep(6)
+            # time.sleep(6)
             self.partition(self.num_reducers, map_out,append_flag)
             print(f"Mapper {self.MapperID+1} completed partitioning")
             return kmeans_pb2.mapreturn(success=True)
@@ -159,13 +169,15 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
 
 
     def GivereducerInput(self, request, context):
+        if self.isProbabilisticFailure:
+            return kmeans_pb2.ReducerOutput(success=False, map_outputs=[])
         requestID = request.reducer_id
         print(f"Reducer {requestID+1} requested Mapper {self.MapperID+1} for input")
         with open(
             f"Data/Mappers/M{self.MapperID+1}/partition_{requestID+1}.txt", "r"
         ) as file:
             r = file.readlines()
-        
+
             l = []
             for i in r:
                 #print("I: ",i)

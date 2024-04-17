@@ -6,6 +6,7 @@ import kmeans_pb2
 import kmeans_pb2_grpc
 from math import *
 import math
+import random
 import sys
 
 
@@ -41,6 +42,7 @@ class Reducer(kmeans_pb2_grpc.ReducerServicer):
         y = sum(y) / len(y)
 
         with open(f"Data/Reducers/R{self.reducer_id+1}.txt", "a") as f:
+            # print(f"Reducer {self.reducer_id}: {centroidId},{x},{y}")
             f.write(f"{centroidId},{x},{y}\n")
         # with open(f"R{self.reducer_id+1}.txt", "a") as f:
         #     f.write(f"{centroidId},{x},{y}\n")
@@ -52,8 +54,12 @@ class Reducer(kmeans_pb2_grpc.ReducerServicer):
             self.num_mappers = request.num_mappers
             cent = request.centroidlist
             self.mappers = request.mappers
-            with open(f"Data/Reducers/R{self.reducer_id+1}.txt", "w") as f:
-                f.write("")
+            # if self.reducer_id%2==0 and random.random() < 0.5:
+            #     print("Reducer failed due to probabilistic failure")
+            #     return kmeans_pb2.Reducereturn(success=False,reduce_output="Failure")
+            if request.second == -1:
+                with open(f"Data/Reducers/R{self.reducer_id+1}.txt", "w") as f:
+                    f.write("")
             # with open(f"R{self.reducer_id+1}.txt", "a") as f:
             #     f.write("-------------------------------------------\n")
             l = []
@@ -65,22 +71,35 @@ class Reducer(kmeans_pb2_grpc.ReducerServicer):
                 try:
                     channel = grpc.insecure_channel(id)  # mapper IP:port
                     stub = kmeans_pb2_grpc.MapperStub(channel)
-                    response = stub.GivereducerInput(
-                        kmeans_pb2.ReducerInputRequest(reducer_id=self.reducer_id)
-                    )
+                    if request.second != -1:
+                        response = stub.GivereducerInput(
+                            kmeans_pb2.ReducerInputRequest(reducer_id=request.second)
+                        )
+                    else:
+                        response = stub.GivereducerInput(
+                            kmeans_pb2.ReducerInputRequest(reducer_id=self.reducer_id)
+                        )
                     if response.success == True:
                         temp = response.map_outputs
+                        
                         # print("TEMP", temp)
                         for t in temp:
                             trio_list.append([t.x, t.y, t.centroidId])
+                        print(f"Mapper {id} gave output with second value as {request.second}")
+                        print("TRIO LIST", trio_list)
+                        print("-------------------------------------------")
+                    else:
+                        print(f"Mapper {id} failed to give output")
                 # print("TRIO LIST", trio_list)
-                except:
+                except Exception as e:
+                    print(f"Error in Reducer {self.reducer_id} with Mapper {id}")
+                    print(e)
                     continue
             self.shuffle_and_sort(trio_list)
             # print("TRIO---------------")
             # print(trio_list)
             for c, v in self.output.items():
-                print("c:", c, "v: ", v)
+                # print("c:", c, "v: ", v)
                 self.reduce(c, v)
             file_read = open(f"Data/Reducers/R{self.reducer_id+1}.txt", "r")
             str1 = file_read.read()

@@ -38,6 +38,7 @@ message reducerinput{
   repeated centroids centroidlist = 2;
   int32 num_mappers = 3;
   repeated string mappers = 4;
+  int32 second = 5;
 }
 
 message InputSplitRequest {
@@ -68,4 +69,5 @@ message ReducerOutput {
 }
 
 
-//python3 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. kmeans.proto --pyi_out=. x
+// python3 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. kmeans.proto --pyi_out=. x
+// python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. kmeans.proto --pyi_out=.

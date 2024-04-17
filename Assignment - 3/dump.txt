@@ -1,0 +1,52 @@
+Initial Centroids: 
+31.557122052707076,36.90041258086754
+88.28421977908025,12.067049557489574
+14.536067497498816,51.3905894486027
+Iteration 1 started: 
+gRPC call to Mapper 0 with start index 0 and end index 10
+gRPC call to Mapper 1 with start index 10 and end index 20
+grpc call to Mapper 0 successful
+grpc call to Mapper 1 successful
+gRPC call to Reducer 0 with start index 0 and end index 10
+gRPC call to Reducer 1 with start index 10 and end index 20
+grpc call to Reducer 0 successful
+grpc call to Reducer 1 successful
+New Centroids: 
+29.824663639068604,32.47341365814209
+84.04949188232422,39.74965167045593
+23.05101169239391,69.78228343616833
+Iteration 2 started: 
+gRPC call to Mapper 0 with start index 0 and end index 10
+gRPC call to Mapper 1 with start index 10 and end index 20
+grpc call to Mapper 0 successful
+grpc call to Mapper 1 successful
+gRPC call to Reducer 0 with start index 0 and end index 10
+gRPC call to Reducer 1 with start index 10 and end index 20
+grpc call to Reducer 1 successful
+grpc call to Reducer 0 successful
+New Centroids: 
+21.496073246002197,31.84015636444092
+80.42453155517578,42.0382604598999
+22.927939033508302,71.95787086486817
+Iteration 3 started: 
+gRPC call to Mapper 0 with start index 0 and end index 10
+gRPC call to Mapper 1 with start index 10 and end index 20
+grpc call to Mapper 1 successful
+grpc call to Mapper 0 successful
+gRPC call to Reducer 0 with start index 0 and end index 10
+gRPC call to Reducer 1 with start index 10 and end index 20
+grpc call to Reducer 1 successful
+grpc call to Reducer 0 successful
+New Centroids: 
+20.336072365442913,35.09856208165487
+80.42453155517578,42.0382604598999
+23.860369152492947,74.24312422010634
+Iteration 4 started: 
+gRPC call to Mapper 0 with start index 0 and end index 10
+gRPC call to Mapper 1 with start index 10 and end index 20
+grpc call to Mapper 0 successful
+grpc call to Mapper 1 successful
+gRPC call to Reducer 0 with start index 0 and end index 10
+gRPC call to Reducer 1 with start index 10 and end index 20
+grpc call to Reducer 0 successful
+grpc call to Reducer 1 successful

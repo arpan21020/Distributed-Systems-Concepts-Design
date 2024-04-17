@@ -28,16 +28,18 @@ class centroids(_message.Message):
     def __init__(self, x: _Optional[float] = ..., y: _Optional[float] = ...) -> None: ...
 
 class reducerinput(_message.Message):
-    __slots__ = ("reducer_id", "centroidlist", "num_mappers", "mappers")
+    __slots__ = ("reducer_id", "centroidlist", "num_mappers", "mappers", "second")
     REDUCER_ID_FIELD_NUMBER: _ClassVar[int]
     CENTROIDLIST_FIELD_NUMBER: _ClassVar[int]
     NUM_MAPPERS_FIELD_NUMBER: _ClassVar[int]
     MAPPERS_FIELD_NUMBER: _ClassVar[int]
+    SECOND_FIELD_NUMBER: _ClassVar[int]
     reducer_id: int
     centroidlist: _containers.RepeatedCompositeFieldContainer[centroids]
     num_mappers: int
     mappers: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, reducer_id: _Optional[int] = ..., centroidlist: _Optional[_Iterable[_Union[centroids, _Mapping]]] = ..., num_mappers: _Optional[int] = ..., mappers: _Optional[_Iterable[str]] = ...) -> None: ...
+    second: int
+    def __init__(self, reducer_id: _Optional[int] = ..., centroidlist: _Optional[_Iterable[_Union[centroids, _Mapping]]] = ..., num_mappers: _Optional[int] = ..., mappers: _Optional[_Iterable[str]] = ..., second: _Optional[int] = ...) -> None: ...
 
 class InputSplitRequest(_message.Message):
     __slots__ = ("startidx", "endidx", "centroidlist", "mapper_id", "no_reducers", "append")
