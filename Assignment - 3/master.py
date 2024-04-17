@@ -157,7 +157,7 @@ class Master:
                 # print(f"Response success value for Mapper {id}:", response.success)
                 if response.success:
                     # print(id)
-                    self.successList[id] = True
+                    self.mapfailed[id] = False
                 else:
                     print("Failure in Mapper: ", id)
                     self.mapfailed[id] = True
@@ -169,8 +169,15 @@ class Master:
                         centroidlist=cent,
                         mapper_id=id,
                         no_reducers=self.num_reducers,
+                        append=append_flag,
                     )
                 )
+                if response.success:
+                    # print(id)
+                    self.mapfailed[reading_index] = False
+                else:
+                    print("Failure in Mapper: ", id)
+                    self.mapfailed[reading_index] = True
         except grpc.RpcError as e:
             print("Failure in Mapper:", id+1)
             self.mapfailed[id] = True
@@ -235,17 +242,19 @@ class Master:
         return True
 
     def run_reducer(self):
-        if False in self.successList:
+        if True in self.mapfailed:
             return
-        else:
-            threads = []
-            for id in range(self.num_reducers):
-                t = threading.Thread(target=self.call_reducer, args=(id,))
-                threads.append(t)
-                t.start()
+        # if False in self.successList:
+        #     return
+        # else:
+        threads = []
+        for id in range(self.num_reducers):
+            t = threading.Thread(target=self.call_reducer, args=(id,))
+            threads.append(t)
+            t.start()
 
-            for t in threads:
-                t.join()
+        for t in threads:
+            t.join()
 
         # Spawn mapper process and pass necessary parameters
         # subprocess.run(["python", "mapper.py", input_split])
@@ -281,6 +290,8 @@ if __name__ == "__main__":
     k = 2
     max_iterations = 20
     for id in range(m):
+        if(id==0):
+            continue
         run_python_file(f"mapper.py {50000+id}")
         
     for id in range(r):

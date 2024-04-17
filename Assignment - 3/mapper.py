@@ -97,12 +97,14 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
         #     print(partition)
         for i, partition in enumerate(partitions):
             if append_flg==False:
+                print("Removing previous partition file")
                 with open(
                     f"Data/Mappers/M{self.MapperID+1}/partition_{i+1}.txt", "w"
                 ) as file:
                     for key, value in partition:
                         file.write(f"{key},{value[0]},{value[1]}\n")
             else:
+                print("Appending to previous partition file")
                 with open(
                     f"Data/Mappers/M{self.MapperID+1}/partition_{i+1}.txt", "a"
                 ) as file:
@@ -145,7 +147,7 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
 
             map_out = self.map()
             print(f"Mapper {self.MapperID+1} completed mapping")
-            
+            time.sleep(6)
             self.partition(self.num_reducers, map_out,append_flag)
             print(f"Mapper {self.MapperID+1} completed partitioning")
             return kmeans_pb2.mapreturn(success=True)

@@ -80,7 +80,7 @@ class Reducer(kmeans_pb2_grpc.ReducerServicer):
             # print("TRIO---------------")
             # print(trio_list)
             for c, v in self.output.items():
-                # print("c:", c, "v: ", v)
+                print("c:", c, "v: ", v)
                 self.reduce(c, v)
             file_read = open(f"Data/Reducers/R{self.reducer_id+1}.txt", "r")
             str1 = file_read.read()
