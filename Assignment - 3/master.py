@@ -53,18 +53,29 @@ class Master:
 
     def InitiateMapReduce(self):
         # for i in range(self.max_iterations):
-        for i in range(3):
+        isConverged = False
+        for i in range(self.max_iterations):
             self.run_mapper()
             self.run_reducer()
-            print(self.centroids)
-            print(self.new_list)
+            
+            # print(self.new_list)
             if i != 0 and self.convergence():
-                print("Converged at iteration: ", i+1)
+                isConverged = True
                 break
             else:
-                self.centroids = self.new_list
+                self.centroids = self.new_list.copy()
             self.centroid_compilation()
             # self
+        if (isConverged):
+            print("Converged at iteration: ", i+1)
+        else :
+            print("Not Converged")
+        print("Final Centroids: ")
+        rounded_data = [[round(num, 2) for num in sublist] for sublist in self.centroids]
+
+        for sublist in rounded_data:
+            print(sublist)
+        
         # compile the output received from reducers
 
     def divide_input_data(self):
@@ -109,13 +120,12 @@ class Master:
             )
             print(f"Response success value for {id}:", response.success)
             if response.success:
-                print(id)
+                # print(id)
                 self.successList[id] = True
         except KeyboardInterrupt:
             print("Failure in Mapper: ", id)
 
     def run_mapper(self):
-        print("Final Centroids: ", self.centroids)
         threads = []
         for id in range(self.num_mappers):
             t = threading.Thread(target=self.call_mapper, args=(id,))
@@ -149,16 +159,12 @@ class Master:
                 )
             )
             read_output = response.reduce_output
-            print("*"*40,"read output","*"*40)
-            
-            print(read_output)
-            print("*"*40,"read output","*"*40)
+           
             lst = read_output.split("\n")
-            print(self.new_list,"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn")
+            # print(self.new_list,"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn")
             for i in lst:
                 if i:
                     temp = i.split(",")
-                    print(temp,"-------------------"  )
                     self.new_list[int(temp[0])] = [float(temp[1]), float(temp[2])]
             # print(response.success)
         except KeyboardInterrupt:

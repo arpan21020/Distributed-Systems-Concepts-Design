@@ -42,6 +42,8 @@ class Reducer(kmeans_pb2_grpc.ReducerServicer):
 
         with open(f"Data/Reducers/R{self.reducer_id+1}.txt", "a") as f:
             f.write(f"{centroidId},{x},{y}\n")
+        with open(f"R{self.reducer_id+1}.txt", "a") as f:
+            f.write(f"{centroidId},{x},{y}\n")
         return centroidId, (x, y)
 
     def call_reducer(self, request, context):
@@ -52,6 +54,8 @@ class Reducer(kmeans_pb2_grpc.ReducerServicer):
             self.mappers = request.mappers
             with open(f"Data/Reducers/R{self.reducer_id+1}.txt", "w") as f:
                 f.write("")
+            with open(f"R{self.reducer_id+1}.txt", "a") as f:
+                f.write("-------------------------------------------\n")
             l = []
             for c in cent:
                 l.append([c.x, c.y])
