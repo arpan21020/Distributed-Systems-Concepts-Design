@@ -33,7 +33,7 @@ class Master:
         for i in range(r):
             self.reducers.append("localhost:" + str(portr + i))
         # for i in range(self.num_centroids):
-        with open("Data/Input/points2.txt", "r") as f:
+        with open("Data/Input/points5.txt", "r") as f:
             points = f.readlines()
             for i in range(len(points)):
                 point = points[i].split(",")
@@ -41,6 +41,7 @@ class Master:
 
         # select k random points as initial centroids
         self.centroids = random.sample(self.points, self.num_centroids)
+        # self.centroids=[[11.1, -1.5],[0.0, 7.1]]
 #         self.centroids=[[1.4971327987543468, -7.9464652425529],
 # [-8.136641858654077, -4.46105486606649]]
         print("Initial Centroids: ")
@@ -330,6 +331,8 @@ if __name__ == "__main__":
     r = int(input("Enter the number of reducers: "))
     k = int(input("Enter the number of centroids: "))
     max_iterations = int(input("Enter the maximum number of iterations: "))
+    if(r>m):
+        m=r
     # m = 2
     # r = 2
     # k = 3

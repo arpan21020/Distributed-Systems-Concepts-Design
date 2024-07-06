@@ -1,0 +1,15 @@
+# reducer computing new centroids
+    def reduce(self, centroidId, list_points):
+        # l = self.output[centroidId]
+        x = [i[0] for i in list_points]
+        y = [i[1] for i in list_points]
+        x = sum(x) / len(x)
+        y = sum(y) / len(y)
+
+        with open(f"Data/Reducers/R{self.reducer_id+1}.txt", "a") as f:
+            # print(f"Reducer {self.reducer_id}: {centroidId},{x},{y}")
+            f.write(f"{centroidId},{x},{y}\n")
+        # with open(f"R{self.reducer_id+1}.txt", "a") as f:
+        #     f.write(f"{centroidId},{x},{y}\n")
+        return centroidId, (x, y)
+

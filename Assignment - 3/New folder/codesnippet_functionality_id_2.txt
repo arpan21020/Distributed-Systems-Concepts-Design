@@ -1,0 +1,10 @@
+# Centroid Initialization
+self.num_centroids = k
+
+with open("Data/Input/points.txt", "r") as f:
+            points = f.readlines()
+            for i in range(len(points)):
+                point = points[i].split(",")
+                self.points.append([float(point[0]), float(point[1])])
+
+self.centroids = random.sample(self.points, self.num_centroids)

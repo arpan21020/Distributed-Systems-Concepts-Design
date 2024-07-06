@@ -1,95 +1,117 @@
 Initial Centroids: 
-88.28421977908025,12.067049557489574
-15.256211095947226,62.08885022713485
-41.94706427555632,76.82403075144262
+-2000.69,2012.17
+2006.33,1988.52
+-2004.4,-2003.98
+-2020.48,2006.83
+3.17927,-15.3348
 Iteration 1 started: 
-gRPC call to Mapper 0 with start index 0 and end index 10
-gRPC call to Mapper 1 with start index 10 and end index 20
-grpc call to Mapper 0 failed
+gRPC call to Mapper 0 with start index 0 and end index 20
+gRPC call to Mapper 1 with start index 20 and end index 40
+gRPC call to Mapper 2 with start index 40 and end index 60
+gRPC call to Mapper 3 with start index 60 and end index 80
+gRPC call to Mapper 4 with start index 80 and end index 100
+grpc call to Mapper 4 failed
+grpc call to Mapper 2 failed
+grpc call to Mapper 0 successful
 grpc call to Mapper 1 successful
-gRPC call to Mapper 1 with start index 0 and end index 10
+grpc call to Mapper 3 successful
+gRPC call to Mapper 0 with start index 40 and end index 60
+gRPC call to Mapper 1 with start index 80 and end index 100
+grpc call to Mapper 0 successful
 grpc call to Mapper 1 successful
-gRPC call to Reducer 0 with start index 0 and end index 10
-gRPC call to Reducer 1 with start index 10 and end index 20
+gRPC call to Reducer 0 with start index 0 and end index 20
+gRPC call to Reducer 1 with start index 20 and end index 40
+gRPC call to Reducer 2 with start index 40 and end index 60
+gRPC call to Reducer 3 with start index 60 and end index 80
+gRPC call to Reducer 4 with start index 80 and end index 100
 grpc call to Reducer 0 successful
+grpc call to Reducer 4 successful
+grpc call to Reducer 2 successful
+grpc call to Reducer 3 successful
 grpc call to Reducer 1 successful
 New Centroids: 
-85.01289621988933,33.74941603342692
-17.057626940987326,53.638379790566184
-49.36830488840739,66.28339449564616
+-1995.6166585286458,2008.0500081380208
+2009.356189546131,2013.2314162481398
+-2006.8570068359375,-2010.801007080078
+-2027.4624938964844,2013.7937316894531
+815.436326533556,-813.8493376345862
 Iteration 2 started: 
-gRPC call to Mapper 0 with start index 0 and end index 10
-gRPC call to Mapper 1 with start index 10 and end index 20
+gRPC call to Mapper 0 with start index 0 and end index 20
+gRPC call to Mapper 1 with start index 20 and end index 40
+gRPC call to Mapper 2 with start index 40 and end index 60
+gRPC call to Mapper 3 with start index 60 and end index 80
+gRPC call to Mapper 4 with start index 80 and end index 100
 grpc call to Mapper 0 failed
+grpc call to Mapper 2 failed
 grpc call to Mapper 1 successful
-gRPC call to Mapper 1 with start index 0 and end index 10
+grpc call to Mapper 4 successful
+grpc call to Mapper 3 successful
+gRPC call to Mapper 1 with start index 0 and end index 20
+gRPC call to Mapper 1 with start index 40 and end index 60
 grpc call to Mapper 1 successful
-gRPC call to Reducer 0 with start index 0 and end index 10
-gRPC call to Reducer 1 with start index 10 and end index 20
-grpc call to Reducer 0 failed
-grpc call to Reducer 1 successful
-gRPC call to Reducer 1 with start index 10 and end index 20
-grpc call to Reducer 1 successful
-New Centroids: 
-84.04949188232422,39.74965167045593
-17.057626940987326,53.638379790566184
-43.01011009216309,67.9900016784668
-Iteration 3 started: 
-gRPC call to Mapper 0 with start index 0 and end index 10
-gRPC call to Mapper 1 with start index 10 and end index 20
-grpc call to Mapper 0 failed
 grpc call to Mapper 1 successful
-gRPC call to Mapper 1 with start index 0 and end index 10
-grpc call to Mapper 1 successful
-gRPC call to Reducer 0 with start index 0 and end index 10
-gRPC call to Reducer 1 with start index 10 and end index 20
-grpc call to Reducer 0 failed
+gRPC call to Reducer 0 with start index 0 and end index 20
+gRPC call to Reducer 1 with start index 20 and end index 40
+gRPC call to Reducer 2 with start index 40 and end index 60
+gRPC call to Reducer 3 with start index 60 and end index 80
+gRPC call to Reducer 4 with start index 80 and end index 100
+grpc call to Reducer 2 failed
+grpc call to Reducer 4 failed
 grpc call to Reducer 1 successful
-gRPC call to Reducer 1 with start index 10 and end index 20
-grpc call to Reducer 1 successful
-New Centroids: 
-80.42453155517578,42.0382604598999
-14.230864822864532,46.276429533958435
-31.844691140311106,72.65257917131696
-Iteration 4 started: 
-gRPC call to Mapper 0 with start index 0 and end index 10
-gRPC call to Mapper 1 with start index 10 and end index 20
-grpc call to Mapper 0 successful
-grpc call to Mapper 1 successful
-gRPC call to Reducer 0 with start index 0 and end index 10
-gRPC call to Reducer 1 with start index 10 and end index 20
-grpc call to Reducer 0 failed
-grpc call to Reducer 1 successful
-gRPC call to Reducer 1 with start index 10 and end index 20
-grpc call to Reducer 1 successful
-New Centroids: 
-80.42453155517578,42.0382604598999
-18.527680814266205,42.06546103954315
-26.93404429299491,77.46511459350586
-Iteration 5 started: 
-gRPC call to Mapper 0 with start index 0 and end index 10
-gRPC call to Mapper 1 with start index 10 and end index 20
-grpc call to Mapper 0 failed
-grpc call to Mapper 1 successful
-gRPC call to Mapper 1 with start index 0 and end index 10
-grpc call to Mapper 1 successful
-gRPC call to Reducer 0 with start index 0 and end index 10
-gRPC call to Reducer 1 with start index 10 and end index 20
-grpc call to Reducer 1 successful
+grpc call to Reducer 3 successful
 grpc call to Reducer 0 successful
+gRPC call to Reducer 1 with start index 20 and end index 40
+gRPC call to Reducer 1 with start index 20 and end index 40
+grpc call to Reducer 1 successful
+grpc call to Reducer 1 successful
 New Centroids: 
-80.42453155517578,42.0382604598999
-20.336072365442913,35.09856208165487
-23.860369152492947,74.24312422010634
-Iteration 6 started: 
-gRPC call to Mapper 0 with start index 0 and end index 10
-gRPC call to Mapper 1 with start index 10 and end index 20
+-1996.1280029296875,2005.0840087890624
+2010.7076885516826,2013.964604304387
+-2006.8570068359375,-2010.801007080078
+-2027.171651204427,2011.8316446940105
+723.8782917505656,-720.2742494680942
+Iteration 3 started: 
+gRPC call to Mapper 0 with start index 0 and end index 20
+gRPC call to Mapper 1 with start index 20 and end index 40
+gRPC call to Mapper 2 with start index 40 and end index 60
+gRPC call to Mapper 3 with start index 60 and end index 80
+gRPC call to Mapper 4 with start index 80 and end index 100
 grpc call to Mapper 0 successful
 grpc call to Mapper 1 successful
-gRPC call to Reducer 0 with start index 0 and end index 10
-gRPC call to Reducer 1 with start index 10 and end index 20
+grpc call to Mapper 3 successful
+grpc call to Mapper 2 successful
+grpc call to Mapper 4 successful
+gRPC call to Reducer 0 with start index 0 and end index 20
+gRPC call to Reducer 1 with start index 20 and end index 40
+gRPC call to Reducer 2 with start index 40 and end index 60
+gRPC call to Reducer 3 with start index 60 and end index 80
+gRPC call to Reducer 4 with start index 80 and end index 100
 grpc call to Reducer 0 failed
+grpc call to Reducer 2 failed
+grpc call to Reducer 3 successful
 grpc call to Reducer 1 successful
-gRPC call to Reducer 1 with start index 10 and end index 20
-grpc call to Reducer 1 successful
-Input converged at iteration: 6
+grpc call to Reducer 4 successful
+gRPC call to Reducer 4 with start index 80 and end index 100
+gRPC call to Reducer 4 with start index 80 and end index 100
+grpc call to Reducer 4 failed
+grpc call to Reducer 4 failed
+New Centroids: 
+-1996.1280029296875,2005.0840087890624
+2009.356189546131,2013.2314162481398
+-2006.8570068359375,-2010.801007080078
+-2027.4624938964844,2013.7937316894531
+815.436326533556,-813.8493376345862
+Iteration 4 started: 
+gRPC call to Mapper 0 with start index 0 and end index 20
+gRPC call to Mapper 1 with start index 20 and end index 40
+gRPC call to Mapper 2 with start index 40 and end index 60
+gRPC call to Mapper 3 with start index 60 and end index 80
+gRPC call to Mapper 4 with start index 80 and end index 100
+grpc call to Mapper 0 failed
+grpc call to Mapper 1 successful
+grpc call to Mapper 2 successful
+grpc call to Mapper 3 successful
+grpc call to Mapper 4 successful
+gRPC call to Mapper 4 with start index 0 and end index 20
+grpc call to Mapper 4 failed
+Input converged at iteration: 4

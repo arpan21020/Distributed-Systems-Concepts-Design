@@ -1,0 +1,21 @@
+# Input Splitting in Master
+
+def divide_input_data(self):
+        m = self.num_mappers
+        ll = len(self.points)
+        pt = int(ll / m)
+        l = []
+        start = 0
+        end = pt
+        md = ll % m
+        for i in range(m):
+            if md > 0:
+                end = end + 1
+                md -= 1
+            else:
+                end = end
+            l.append([start, end])
+            start = end
+            end = end + pt
+        print("Mappers Division of Input Data: ", l)
+        return l

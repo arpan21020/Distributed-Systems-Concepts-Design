@@ -1,0 +1,128 @@
+#Parallel execution of Mapper
+def call_mapper(self, id,append_flag ,reading_index = -1):
+        try:
+            node = self.mappers[id]
+            channel = grpc.insecure_channel(node)  # mapper IP:port
+            stub = kmeans_pb2_grpc.MapperStub(channel)
+            cent = []
+            for i in range(len(self.centroids)):
+                cent.append(
+                    kmeans_pb2.centroids(x=self.centroids[i][0], y=self.centroids[i][1])
+                )
+            if reading_index == -1:
+                f1.write(f"gRPC call to Mapper {id} with start index {self.input_splits[id][0]} and end index {self.input_splits[id][1]}\n")
+                response = stub.call_mapper(
+                    kmeans_pb2.InputSplitRequest(
+                        startidx=self.input_splits[id][0],
+                        endidx=self.input_splits[id][1],
+                        centroidlist=cent,
+                        mapper_id=id,
+                        no_reducers=self.num_reducers,
+                        append = append_flag,
+                    )
+                )
+
+                # print(f"Response success value for Mapper {id}:", response.success)
+                if response.success:
+                    f1.write(f"grpc call to Mapper {id} successful\n")
+                    # print(id)
+                    self.mapfailed[id] = False
+                else:
+                    print("Failure in Mapper: ", id)
+                    f1.write(f"grpc call to Mapper {id} failed\n")
+                    self.mapfailed[id] = True
+            else : # we have to read from other place, rest everything remains same
+                f1.write(f"gRPC call to Mapper {id} with start index {self.input_splits[reading_index][0]} and end index {self.input_splits[reading_index][1]}\n")
+                response = stub.call_mapper(
+                    kmeans_pb2.InputSplitRequest(
+                        startidx=self.input_splits[reading_index][0],
+                        endidx=self.input_splits[reading_index][1],
+                        centroidlist=cent,
+                        mapper_id=id,
+                        no_reducers=self.num_reducers,
+                        append=append_flag,
+                    )
+                )
+                if response.success:
+                    f1.write(f"grpc call to Mapper {id} successful\n")
+                    # print(id)
+                    self.mapfailed[reading_index] = False
+                else:
+                    f1.write(f"grpc call to Mapper {id} failed\n")
+                    print("Failure in Mapper: ", id)
+                    self.mapfailed[reading_index] = True
+        except grpc.RpcError as e:
+            print("Failure in Mapper:", id+1)
+            self.mapfailed[id] = True
+
+def run_mapper(self):
+        threads = []
+        for id in range(self.num_mappers):
+            t = threading.Thread(target=self.call_mapper, args=(id,False))
+            threads.append(t)
+            t.start()
+
+        for t in threads:
+            t.join()
+
+# Parallel execution of Reducers
+def call_reducer(self, id,second_reducer=-1):
+        # print("CALLING REDUCER")
+        try:
+            node = self.reducers[id]
+            channel = grpc.insecure_channel(node)  # reducer IP:port
+            stub = kmeans_pb2_grpc.ReducerStub(channel)
+            cent = []
+            for i in range(len(self.centroids)):
+                cent.append(
+                    kmeans_pb2.centroids(x=self.centroids[i][0], y=self.centroids[i][1])
+                )
+            f1.write(f"gRPC call to Reducer {id} with start index {self.input_splits[id][0]} and end index {self.input_splits[id][1]}\n")
+            response = stub.call_reducer(
+                kmeans_pb2.reducerinput(
+                    reducer_id=id,
+                    centroidlist=cent,
+                    num_mappers=self.num_mappers,
+                    mappers=self.mappers,
+                    second=second_reducer,
+                )
+            )
+            if (response.success==True):
+                f1.write(f"grpc call to Reducer {id} successful\n")                
+            if (response.success==False):
+                f1.write(f"grpc call to Reducer {id} failed\n")
+                print("Failure in Reducer: ", id)
+                self.reducefailed[id] = True
+                return
+            print("Reducer ", id, "completed")
+            read_output = response.reduce_output
+            
+            lst = read_output.split("\n")
+            # print(self.new_list,"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn")
+            for i in lst:
+                if i:
+                    temp = i.split(",")
+                    self.new_list[int(temp[0])] = [float(temp[1]), float(temp[2])]
+            # print(response.success)
+        except grpc.RpcError as e:
+            self.reducefailed[id] = True
+            print("Failure in Reducer: ", id+1)
+
+
+def run_reducer(self):
+        if True in self.mapfailed:
+            return
+        # if False in self.successList:
+        #     return
+        # else:
+        threads = []
+        for id in range(self.num_reducers):
+            t = threading.Thread(target=self.call_reducer, args=(id,))
+            threads.append(t)
+            t.start()
+
+        for t in threads:
+            t.join()
+
+
+

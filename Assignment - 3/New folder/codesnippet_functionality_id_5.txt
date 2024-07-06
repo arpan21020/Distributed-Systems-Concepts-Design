@@ -1,0 +1,41 @@
+# Fault Tolerance if any mapper or reducer not respond 
+
+def handle_mappers(self):
+        # find working mappers first
+        working_mappers = []
+        for i in range(len(self.mapfailed)):
+            if (self.mapfailed[i]==False):
+                working_mappers.append(i)
+                # self.call_mapper(i)
+                # self.mapfailed[i] = False
+        threads = []
+        # assuming failures are less than working mappers
+        for i in range(len(self.mapfailed)):
+            if (self.mapfailed[i]==True):
+                # choose any of the working mappers randomly and assign it the work of the failed mapper
+                random_mapper = random.choice(working_mappers)
+                # self.call_mapper(random_mapper,reading_index = i)
+                thread = threading.Thread(target=self.call_mapper, args=(random_mapper, True,), kwargs={'reading_index': i})
+                thread.start()
+                threads.append(thread)
+        for t in threads:
+            t.join()
+        
+    def handle_reducers(self):
+        # find working reducers first
+        working_reducers = []
+        for i in range(len(self.reducefailed)):
+            if (self.reducefailed[i]==False):
+                working_reducers.append(i)
+        threads = []
+        # assuming failures are less than working reducers
+        for i in range(len(self.reducefailed)):
+            if (self.reducefailed[i]==True):
+                # choose any of the working reducers randomly and assign it the work of the failed reducer
+                random_reducer = random.choice(working_reducers)
+                thread = threading.Thread(target=self.call_reducer, args=(random_reducer,), kwargs={'second_reducer': i})
+                thread.start()
+                threads.append(thread)
+        
+        for t in threads:
+            t.join()

@@ -1,0 +1,40 @@
+#Shuffle (Reducers fetching the files from mappers)
+
+            trio_list = []
+            for id in self.mappers:
+                try:
+                    channel = grpc.insecure_channel(id)  # mapper IP:port
+                    stub = kmeans_pb2_grpc.MapperStub(channel)
+                    if request.second != -1:
+                        response = stub.GivereducerInput(
+                            kmeans_pb2.ReducerInputRequest(reducer_id=request.second)
+                        )
+                    else:
+                        response = stub.GivereducerInput(
+                            kmeans_pb2.ReducerInputRequest(reducer_id=self.reducer_id)
+                        )
+                    if response.success == True:
+                        temp = response.map_outputs
+                        
+                        # print("TEMP", temp)
+                        for t in temp:
+                            trio_list.append([t.x, t.y, t.centroidId])
+                        print(f"Mapper {id} gave output with second value as {request.second}")
+                        print("TRIO LIST", trio_list)
+                        print("-------------------------------------------")
+                    else:
+                        print(f"Mapper {id} failed to give output")
+
+ def shuffle_and_sort(self, partitonedList):
+        # sorting patitionedList on the basis of the third element
+        partitonedList.sort(key=lambda x: x[2])
+        dictionary = {}
+        for inner_list in partitonedList:
+            key = inner_list[2]  # Third element as key
+            value = (inner_list[0], inner_list[1])  # Tuple of first and second elements
+            if key in dictionary:
+                dictionary[key].append(value)
+            else:
+                dictionary[key] = [value]
+
+        self.output = dictionary

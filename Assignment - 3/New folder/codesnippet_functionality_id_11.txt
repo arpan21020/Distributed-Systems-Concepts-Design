@@ -1,0 +1,19 @@
+# storing new centroids in a list
+ read_output = response.reduce_output
+            
+            lst = read_output.split("\n")
+            # print(self.new_list,"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn")
+            for i in lst:
+                if i:
+                    temp = i.split(",")
+                    self.new_list[int(temp[0])] = [float(temp[1]), float(temp[2])]
+
+#using new centroids
+self.centroids = self.new_list.copy()
+                #write new centroids to file f1
+                f1.write(f"New Centroids: \n")
+                for sublist in self.centroids:
+                    f1.write(str(sublist[0]) + "," + str(sublist[1]) + "\n")
+            self.centroid_compilation()
+            print("New Centroids: ", self.centroids)
+

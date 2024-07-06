@@ -21,6 +21,7 @@ class Reducer(kmeans_pb2_grpc.ReducerServicer):
         self.output = 0
 
     def shuffle_and_sort(self, partitonedList):
+        # shuffling of the list happens over the internet
         # sorting patitionedList on the basis of the third element
         partitonedList.sort(key=lambda x: x[2])
         dictionary = {}

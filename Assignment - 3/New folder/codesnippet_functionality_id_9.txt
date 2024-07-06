@@ -1,0 +1,15 @@
+#Sorting done by Reducer
+
+ def shuffle_and_sort(self, partitonedList):
+        # sorting patitionedList on the basis of the third element
+        partitonedList.sort(key=lambda x: x[2])
+        dictionary = {}
+        for inner_list in partitonedList:
+            key = inner_list[2]  # Third element as key
+            value = (inner_list[0], inner_list[1])  # Tuple of first and second elements
+            if key in dictionary:
+                dictionary[key].append(value)
+            else:
+                dictionary[key] = [value]
+
+        self.output = dictionary

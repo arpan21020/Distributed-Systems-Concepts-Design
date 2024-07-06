@@ -1,0 +1,9 @@
+# Logic/Criteria used for stopping the K-means algorithm
+
+def convergence(self):
+        if len(self.centroids) != len(self.new_list):
+            return False
+        for i in range(len(self.centroids)):
+            if round(self.centroids[i][0], 2) != round(self.new_list[i][0], 2) or round(self.centroids[i][1], 2) != round(self.new_list[i][1], 2):
+                return False
+        return True

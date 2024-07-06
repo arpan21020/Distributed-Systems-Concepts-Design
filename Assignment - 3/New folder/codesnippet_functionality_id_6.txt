@@ -1,0 +1,29 @@
+# Map Function By Mapper
+def map(self):
+        self.output = []
+        # print("Centroids: ",self.centroids)
+        
+        # Process each data point in the input split
+        for i in range(self.end_index-self.start_index):
+            try:
+                data_point = self.data[i]
+            except Exception as e:
+                print("Error:",e)
+                print("i:",i)
+                quit()
+                break
+            # Find the nearest centroid for the data point
+            
+            nearest_centroid = self.find_nearest_centroid(data_point)
+            # print("Nearest Centroid: ",nearest_centroid)
+            # Output the key-value pair
+            # output = f"{nearest_centroid},{data_point[0]},{data_point[1]}"
+            # Write the output to a file in the mapper's directory
+            self.output.append({nearest_centroid: data_point})
+
+            # if self.output.get(nearest_centroid) == None:
+            #     self.output[nearest_centroid] = []
+            # self.output[nearest_centroid].append(data_point)
+        # print(self.output)
+        # print("Output: ",self.output)
+        return self.output

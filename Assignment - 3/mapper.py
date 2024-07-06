@@ -83,6 +83,7 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
         return distance
 
     def partition(self, num_reducers, map_out,append_flg):
+        # partition mapper
         partitions = [[] for _ in range(num_reducers)]
         # print("Map_out: ",map_out,"---------------------------------------")
         for dict in map_out:
@@ -133,7 +134,7 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
             append_flag = request.append
             self.isProbabilisticFailure = False
 
-            #probabilistic function of mapper failure
+            # probabilistic function of mapper failure
             if ((request.mapper_id%2==0) and (random.random() < 0.5)):
                 print("Mapper failed due to probabilistic failure")
                 self.isProbabilisticFailure = True
@@ -148,7 +149,7 @@ class Mapper(kmeans_pb2_grpc.MapperServicer):
             if not os.path.exists(dir_path):
                 os.makedirs(dir_path)
 
-            with open("Data/Input/points2.txt", "r") as file:
+            with open("Data/Input/points5.txt", "r") as file:
                 points = file.readlines()
                 self.data=[]
                 for i in range(self.start_index, self.end_index):
